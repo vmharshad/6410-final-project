@@ -1,22 +1,22 @@
 <html>
 <head>
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="/css/styles.css">
 
 </head>
 <body>
 	<h3>Request For Information</h3>
 	<form style="height: 66px;" action="requestforinfo" method="post" modelAttribute="RequestForInformation">
 		<div style="height: 86px;">
-			<label for="firstname" class="labelstyle">First Name</label> <input placeholder="First Name" tabindex="1"><br> 
-			 <label for="lastname" class="labelstyle"> Last Name: </label> <input placeholder="First Name" tabindex="2"><br> 
-			 <label for="email" class="labelstyle">Email: </label> <input placeholder="Email" tabindex="3"> <br> 
-			 <label for="firstname" class="labelstyle">BirthDate: </label> <input placeholder="Birth Date" tabindex="4">
-
+			<label for="firstname" class="labelstyle">First Name</label> <input name="firstName" placeholder="First Name" tabindex="1"><br> 
+			 <label for="lastname" class="labelstyle"> Last Name: </label> <input name="lastName" placeholder="First Name" tabindex="2"><br> 
+			 <label for="email" class="labelstyle">Email: </label> <input name="email" placeholder="Email" tabindex="3"> <br> 
+			 <label for="phone" class="labelstyle">PhoneNumber: </label> <input name="phoneNumber" placeholder="phoneNumber" tabindex="5"><br>
+			 
 			Street Address<br> 
-			<label for="firstname" class="labelstyle">Street: </label>  <input placeholder="Street" tabindex="5"><br>
-			<label for="City" class="labelstyle">City: </label> <input placeholder="City" tabindex="2"><br>
-			<label for="State" class="labelstyle">State:</label>
-			   <select><option>Please Select...</option><option>AL</option>
+			<label for="street" class="labelstyle">Street: </label>  <input name="streetAddress" placeholder="Street" tabindex="6"><br>
+			<label for="city" class="labelstyle">City: </label> <input name="city" placeholder="City" tabindex="7"><br>
+			<label for="state" class="labelstyle">State:</label>
+			   <select name="state" tabindex="8"><option>Please Select...</option><option>AL</option>
 				<option>AK</option>
 				<option>AZ</option>
 				<option>AR</option>
@@ -66,14 +66,13 @@
 				<option>WV</option>
 				<option>WI</option>
 				<option>WY</option></select><br>
-			<label for="postalCode" class="labelstyle">Postal Code:</label> <input placeholder="Postal Code" tabindex="2"><br>
-			<label for="birthdate" class="labelstyle">Birth date: </label> <input placeholder="<yyyy-mm-dd>" tabindex="2"><br>
-			<label for="highschool" class="labelstyle">High School</label> <input placeholder="School Name" tabindex="2"><br>
-			<label for="intenTerm" class="labelstyle">Intended Entry Term</label> <select><option>Please Select...</option><option>Fall</option>
+			<label for="postalCode" class="labelstyle">Postal Code:</label> <input name="zip" placeholder="Postal Code" tabindex="9"><br>
+			<label for="highschool" class="labelstyle">High School: </label> <input name="highSchool" placeholder="School Name" tabindex="10"><br>
+			<label for="intendTerm" class="labelstyle">Intended Entry Term: </label> <select name="anticipatedStartTerm" tabindex="11"><option>Please Select...</option><option>Fall</option>
 						<option>Spring</option>
 						<option>Summer</option></select><br> 
-			<label for="intendYear" class="labelstyle">Intended Year</label> <input placeholder="<yyyy>" tabindex="2"><br>
-			<label for="intendProg" class="labelstyle">Intended Program</label>  <select id="tfa_130" name="tfa_130" title="Anticipated Program/ Major" class="required"><option value="">Please select...</option>
+			<label for="intendYear" class="labelstyle">Intended Year: </label> <input name="anticipatedYear" placeholder="<yyyy>" tabindex="12"><br>
+			<label for="intendProg" class="labelstyle">Intended Program: </label>  <select name="anticipatedProgram" tabindex="13" id="tfa_130" name="tfa_130" title="Anticipated Program/ Major" class="required"><option value="">Please select...</option>
 					<option value="tfa_196" id="tfa_196" class="">Information Technology, M.S.</option>
 					<option value="tfa_200" id="tfa_200" class="">Aviation Science and Management, B.S.</option>
 					<option value="tfa_201" id="tfa_201" class="">Biology, B.S.</option>
@@ -132,7 +131,7 @@
 					<option value="tfa_264" id="tfa_264" class="">Unmanned Aerial Systems Operator, Cert</option>
 					<option value="tfa_265" id="tfa_265" class="">Web Design, Cert</option>
 					<option value="tfa_280" id="tfa_280" class="">Engineering, Transfer</option></select><br>
-
+	<label for="otherquestions" class="labelstyle">Other Questions: </label> <input name="otherQuestions" placeholder="School Name" tabindex="10"><br>
 					<input type="submit">
 		</div>
 

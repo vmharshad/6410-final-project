@@ -31,20 +31,20 @@ public class RequestForInformationController {
 	
 	@GetMapping("/all")
     public String findAll(Model model) {
-		System.out.println("returning all RFIs");
-		model.addAttribute("rfilist", requestForInfoRepository.findAll());
+		Iterable<RequestForInformation> rfilist = requestForInfoRepository.findAll();
+		System.out.println("returning all RFIs" + rfilist);
+		model.addAttribute("rfilist", rfilist);
         return "requestforinfoList";
     }
 	
 	@GetMapping("/{id}")
 	public String requestForInfo(@PathVariable UUID id, Model model) {
-		System.out.println("returning all RFIs");
-		model.addAttribute("rfilist", requestForInfoRepository.findById(id));
+		System.out.println("returning RFI with id " + id);
+		model.addAttribute("rfi", requestForInfoRepository.findById(id));
         return "requestforinfoReport";
 	}
 	
 	@PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
     public String create(@ModelAttribute RequestForInformation rfi, Model model) {
 		System.out.println("captured RequestForInformation " + rfi.toString());
 		model.addAttribute("id", requestForInfoRepository.save(rfi).getId());

@@ -27,8 +27,6 @@ public class RequestForInformation {
 	@Column(nullable = false, unique = true)
 	private String email;
 	@Column(nullable = false, unique = true)
-	private Date birthDate;
-	@Column(nullable = false, unique = true)
 	private String streetAddress;
 	@Column(nullable = false, unique = true)
 	private String phoneNumber;
@@ -38,8 +36,6 @@ public class RequestForInformation {
 	private String state;
 	@Column(nullable = false, unique = true)
 	private String zip;
-	@Column(nullable = false, unique = true)
-	private String country;
 
 	// Anticipated Info
 	@Column(nullable = false, unique = true)
@@ -98,15 +94,7 @@ public class RequestForInformation {
 	public void setZip(String zip) {
 		this.zip = zip;
 	}
-
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
-	}
-
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -129,14 +117,6 @@ public class RequestForInformation {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public Date getBirthDate() {
-		return birthDate;
-	}
-
-	public void setBirthDate(Date birthDate) {
-		this.birthDate = birthDate;
 	}
 
 	public String getAnticipatedProgram() {
@@ -178,30 +158,31 @@ public class RequestForInformation {
 	public void setOtherQuestions(String otherQuestions) {
 		this.otherQuestions = otherQuestions;
 	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-        builder.append("RequestForInformation [id=");
-        builder.append(getId());
-        builder.append(", firstname=");
-        builder.append(getFirstName());
-        builder.append(", lastname=");
-        builder.append(getLastName());
-        builder.append(", program=");
-        builder.append(getAnticipatedProgram());
-        builder.append(", term=");
-        builder.append(getAnticipatedStartTerm());
-        builder.append(", year=");
-        builder.append(getAnticipatedYear());
-        builder.append(", street=");
-        builder.append(getStreetAddress());
-        builder.append(", city=");
-        builder.append(getCity());
-        builder.append(", state=");
-        builder.append(getState());
-        builder.append(", school=");
-        builder.append(getHighSchool());
-        builder.append("]");
-        return builder.toString();
+		builder.append("RequestForInformation [id=");
+		builder.append(getId());
+		builder.append(", firstname=");
+		builder.append(getFirstName());
+		builder.append(", lastname=");
+		builder.append(getLastName());
+		builder.append(", program=");
+		builder.append(getAnticipatedProgram());
+		builder.append(", term=");
+		builder.append(getAnticipatedStartTerm());
+		builder.append(", year=");
+		builder.append(getAnticipatedYear());
+		builder.append(", street=");
+		builder.append(getStreetAddress());
+		builder.append(", city=");
+		builder.append(getCity());
+		builder.append(", state=");
+		builder.append(getState());
+		builder.append(", school=");
+		builder.append(getHighSchool());
+		builder.append("]");
+		return builder.toString();
 	}
 }
