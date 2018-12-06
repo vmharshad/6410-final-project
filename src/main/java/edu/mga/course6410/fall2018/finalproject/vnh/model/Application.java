@@ -17,7 +17,7 @@ public class Application {
     @Column(nullable = false, unique = false)
     int satScore;
 
-    List<Reference> referenceList;
+//    List<Reference> referenceList;
 
     @Column(nullable = true, unique = false)
     String alumnusparentstudentid;

@@ -1,7 +1,7 @@
 <html>
 <body>
 
-<form action="application" method="post">
+<form action="application" method="post" modelAttribute="newApplication">
 
 <input id="satscore" name="satscore"/>
 <input id="reference1" name="reference1"/>
