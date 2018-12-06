@@ -1,17 +1,25 @@
 <html>
 <body>
 
-<form action="application" method="post" modelAttribute="newApplication">
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<input id="satscore" name="satscore"/>
-<input id="reference1" name="reference1"/>
-<input id="reference2" name="reference2"/>
 
-<input id="alumnusparentid" name="alumnusparentid"/>
 
-<input type="submit" value="Submit Application"/>
+<form>
+<label for="satscore" class="labelstyle">SAT Score</label>
+${application.satScore}<br>
+<label for="reference1" class="labelstyle">Reference 1</label>
+${application.reference1}
+<label for="reference2" class="labelstyle">Reference 2</label>
+${application.reference2}
+
+<label for="satscore" class="labelstyle">Alumnus ID</label>
+${application.alumnusParentId}
+
+
 
 </form>
+
 
 
 </body>

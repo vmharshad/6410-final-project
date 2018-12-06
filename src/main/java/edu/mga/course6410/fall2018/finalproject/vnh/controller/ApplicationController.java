@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -47,9 +48,31 @@ public class ApplicationController {
         return "applications";
     }
 
+
+    @GetMapping("/review//{id}")
+    public String reviewApplication(@PathVariable UUID id, Model model) {
+        if (null == id)
+            return "createApplication";
+
+        Application application = null;
+        System.out.println("Returning application with id " + id.toString());
+        application = applicationRepository.findById(id).get();
+        System.out.println("application.toString() = " + application.toString());
+        System.out.println("application.getSatScore() = " + application.getSatScore());
+        model.addAttribute("application", application);
+        return "reviewApplication";
+    }
+
     @PostMapping
     public String createApplication(@ModelAttribute Application application, Model model) {
-        System.out.println(applicationRepository.save(application).getId());
+        System.out.println("Arrays.toString(model.asMap().keySet().toArray()) = " + Arrays.toString(model.asMap().keySet().toArray()));
+
+        System.out.println("model.asMap().get(\"application\") = " + model.asMap().get("application"));
+
+        System.out.println("application.getSatScore() = " + application.getSatScore());
+        Application savedApplication = applicationRepository.save(application);
+        System.out.println(savedApplication.getId());
+        System.out.println("savedApplication = " + savedApplication.getSatScore());
         return "applications";
     }
 }
