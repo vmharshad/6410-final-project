@@ -10,9 +10,13 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
+@Getter
+@Setter
 public class RequestForInformation {
 	@Id
 	@GeneratedValue(generator = "UUID")
@@ -51,113 +55,6 @@ public class RequestForInformation {
 	@Enumerated(EnumType.STRING)
 	private RFIStatus rfiStatus = RFIStatus.REQUESTED;
 
-	public UUID getId() {
-		return id;
-	}
-
-	public String getStreetAddress() {
-		return streetAddress;
-	}
-
-	public void setStreetAddress(String streetAddress) {
-		this.streetAddress = streetAddress;
-	}
-
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
-
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getState() {
-		return state;
-	}
-
-	public void setState(String state) {
-		this.state = state;
-	}
-
-	public String getZip() {
-		return zip;
-	}
-
-	public void setZip(String zip) {
-		this.zip = zip;
-	}
-	
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getAnticipatedProgram() {
-		return anticipatedProgram;
-	}
-
-	public void setAnticipatedProgram(String anticipatedProgram) {
-		this.anticipatedProgram = anticipatedProgram;
-	}
-
-	public String getAnticipatedStartTerm() {
-		return anticipatedStartTerm;
-	}
-
-	public void setAnticipatedStartTerm(String anticipatedStartTerm) {
-		this.anticipatedStartTerm = anticipatedStartTerm;
-	}
-
-	public String getAnticipatedYear() {
-		return anticipatedYear;
-	}
-
-	public void setAnticipatedYear(String anticipatedYear) {
-		this.anticipatedYear = anticipatedYear;
-	}
-
-	public String getHighSchool() {
-		return highSchool;
-	}
-
-	public void setHighSchool(String highSchool) {
-		this.highSchool = highSchool;
-	}
-
-	public String getOtherQuestions() {
-		return otherQuestions;
-	}
-
-	public void setOtherQuestions(String otherQuestions) {
-		this.otherQuestions = otherQuestions;
-	}
 
 	@Override
 	public String toString() {

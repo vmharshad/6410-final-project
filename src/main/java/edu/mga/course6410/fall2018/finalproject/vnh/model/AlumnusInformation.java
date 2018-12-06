@@ -5,5 +5,5 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Reference {
+public class AlumnusInformation {
 }
