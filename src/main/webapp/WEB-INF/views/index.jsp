@@ -39,58 +39,57 @@
 
       <!-- Unnamed (Menu) -->
       <div id="u26" class="ax_default">
-        <img id="u26_menu" class="img " src="images/rfi_form/u2_menu.png" alt="u26_menu"/>
+        <img id="u26_menu" class="img " src="/images/rfi_form/u2_menu.png" alt="u26_menu"/>
 
         <!-- Unnamed (Table) -->
         <div id="u27" class="ax_default">
 
           <!-- Unnamed (Menu Item) -->
-          <div id="u28" class="ax_default menu_item">
-            <img id="u28_img" class="img " src="images/home/u28.png"/>
+          <div id="u28" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+            <img id="u28_img" class="img " src="/images/home/u28.png"/>
             <div id="u28_text" class="text ">
               <p><span>Home</span></p>
             </div>
           </div>
 
           <!-- Unnamed (Menu Item) -->
-          <div id="u29" class="ax_default menu_item">
-            <img id="u29_img" class="img " src="images/rfi_form/u6.png"/>
+          <div id="u29" class="ax_default menu_item" onclick="document.forms['requestForInfo'].submit();" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+            <img id="u29_img" class="img " src="/images/rfi_form/u6.png"/>
             <div id="u29_text" class="text ">
             <form name="requestForInfo" action="requestforinfo" method="get">
-            <p><span onclick="document.forms['requestForInfo'].submit();">Request For Info</span></p>
+            <p><span>Request For Info</span></p>
 			</form>
-              
             </div>
           </div>
 
           <!-- Unnamed (Menu Item) -->
-          <div id="u30" class="ax_default menu_item">
-            <img id="u30_img" class="img " src="images/rfi_form/u6.png"/>
+          <div id="u30" class="ax_default menu_item" onclick="document.forms['login'].submit();" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+            <img id="u30_img" class="img " src="/images/rfi_form/u6.png"/>
             <div id="u30_text" class="text ">
-              <form name="requestForInfo" action="requestforinfo" method="get">
-            <p><span onclick="document.forms['requestForInfo'].submit();">Apply</span></p>
+              <form name="login" action="user/login" method="get"></form>
+            <p><span>Apply</span></p>
             </div>
           </div>
 
           <!-- Unnamed (Menu Item) -->
-          <div id="u31" class="ax_default menu_item">
-            <img id="u31_img" class="img " src="images/rfi_form/u6.png"/>
+          <div id="u31" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+            <img id="u31_img" class="img " src="/images/rfi_form/u6.png"/>
             <div id="u31_text" class="text ">
               <p><span>After Applying</span></p>
             </div>
           </div>
 
           <!-- Unnamed (Menu Item) -->
-          <div id="u32" class="ax_default menu_item">
-            <img id="u32_img" class="img " src="images/rfi_form/u8.png"/>
+          <div id="u32" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+            <img id="u32_img" class="img " src="/images/rfi_form/u8.png"/>
             <div id="u32_text" class="text ">
               <p><span>Paying for college</span></p>
             </div>
           </div>
 
           <!-- Unnamed (Menu Item) -->
-          <div id="u33" class="ax_default menu_item">
-            <img id="u33_img" class="img " src="images/rfi_form/u9.png"/>
+          <div id="u33" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+            <img id="u33_img" class="img " src="/images/rfi_form/u9.png"/>
             <div id="u33_text" class="text ">
               <p><span>Help</span></p>
             </div>
@@ -100,7 +99,7 @@
 
       <!-- Unnamed (Shape) -->
       <div id="u34" class="ax_default icon">
-        <img id="u34_img" class="img " src="images/rfi_form/u10.png"/>
+        <img id="u34_img" class="img " src="/images/rfi_form/u10.png"/>
       </div>
 
       <!-- Unnamed (Rectangle) -->

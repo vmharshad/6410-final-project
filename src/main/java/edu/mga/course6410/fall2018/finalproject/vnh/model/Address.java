@@ -22,7 +22,7 @@ public class Address {
 	private UUID id;
 	@Column(nullable = false, unique = true)
 	private String streetAddress;
-	@Column(nullable = false, unique = true)
+	@Column(nullable = true, unique = true)
 	private String phoneNumber;
 	@Column(nullable = false, unique = true)
 	private String city;
@@ -30,7 +30,7 @@ public class Address {
 	private String state;
 	@Column(nullable = false, unique = true)
 	private String zip;
-	@Column(nullable = false, unique = true)
+	@Column(nullable = true, unique = true)
 	private String country;
 
 }

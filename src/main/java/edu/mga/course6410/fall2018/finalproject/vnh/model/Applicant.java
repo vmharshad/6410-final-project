@@ -4,9 +4,6 @@ package edu.mga.course6410.fall2018.finalproject.vnh.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
-import java.util.Optional;
-
 @Getter
 @Setter
 public class Applicant {
@@ -16,4 +13,9 @@ public class Applicant {
 
     Application application;
 
+	private String ssn;
+	private String phoneNumber;
+	private Address billingAddress;
+	private Address mailingAddress;
+	
 }

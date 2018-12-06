@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <title>Apply</title>
@@ -93,7 +93,7 @@
           </div>
         </div>
       </div>
-	<form name="applicationForm" action="applications" method="post">
+
       <!-- Unnamed (Shape) -->
       <div id="u65" class="ax_default icon">
         <img id="u65_img" class="img " src="images/rfi_form/u10.png"/>
@@ -101,20 +101,20 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u66" class="ax_default text_field">
-        <input id="u66_input" type="text" name="" placeholder="1" value=""/>
+        <input id="u66_input" type="text" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
       <div id="u67" class="ax_default label">
         <div id="u67_div" class=""></div>
         <div id="u67_text" class="text ">
-          <p><span>Welcome {username}</span></p>
+          <p><span>Welcome Username</span></p>
         </div>
       </div>
 
       <!-- Unnamed (Text Field) -->
       <div id="u68" class="ax_default text_field">
-        <input id="u68_input" type="text"  name="" placeholder="2"  value=""/>
+        <input id="u68_input" type="text" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -126,10 +126,10 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u70" class="ax_default button" onclick="document.forms['applicationForm'].submit();">
+      <div id="u70" class="ax_default button">
         <div id="u70_div" class=""></div>
         <div id="u70_text" class="text ">
-          <p><span>Submit Application</span></p>
+          <p><span>Apply</span></p>
         </div>
       </div>
 
@@ -151,7 +151,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u73" class="ax_default text_field">
-        <input id="u73_input" type="text"  name="" placeholder="3"  value=""/>
+        <input id="u73_input" type="text" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -164,7 +164,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u75" class="ax_default text_field">
-        <input id="u75_input" type="text"  name="" placeholder="4"  value=""/>
+        <input id="u75_input" type="text" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -177,7 +177,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u77" class="ax_default text_field">
-        <input id="u77_input" type="text"  name="" placeholder="5"  value=""/>
+        <input id="u77_input" type="text" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -187,7 +187,6 @@
           <p><span>Course</span></p>
         </div>
       </div>
-      </form>
     </div>
   </body>
 </html>
