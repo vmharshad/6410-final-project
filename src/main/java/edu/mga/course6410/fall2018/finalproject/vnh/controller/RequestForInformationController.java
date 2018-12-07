@@ -48,6 +48,6 @@ public class RequestForInformationController {
     public String create(@ModelAttribute RequestForInformation rfi, Model model) {
 		System.out.println("captured RequestForInformation " + rfi.toString());
 		model.addAttribute("id", requestForInfoRepository.save(rfi).getId());
-		return "requestforinfoSuccess";
+		return "requestforinforesponse";
     }
 }
