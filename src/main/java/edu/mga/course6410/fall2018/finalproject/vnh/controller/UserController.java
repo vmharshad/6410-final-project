@@ -67,7 +67,7 @@ public class UserController {
 					|| !registered.getPassword().equals(user.getPassword())) {
 				System.out.println("Invalid username or password");
 				model.addAttribute("error", "Invalid username or password");
-				return "/login";
+				return "/";
 			}
 			System.out.println("valid login");
 			model.addAttribute("message", "Successfully logged in..");
@@ -78,7 +78,8 @@ public class UserController {
 			return null;
 		}
 		model.addAttribute("username", registered.getUsername());
-		return "redirect:/studenthome";
+		String redirect = registered.getUsername().equals("admin") ? "studenthome":"staffhome";
+		return redirect;
 	}
 
 	@GetMapping(value = "/login")

@@ -77,14 +77,15 @@
         </div>
       </div>
       </form>
-
+	<c:if test="${not empty error}">
       <!-- Unnamed (Rectangle) -->
       <div id="u132" class="ax_default label">
         <div id="u132_div" class=""></div>
         <div id="u132_text" class="text ">
-          <p><span>Error: </span></p>
+          <p><span>${error}</span></p>
         </div>
       </div>
+      </c:if>
 
       <!-- Unnamed (Rectangle) -->
       <div id="u133" class="ax_default heading_1">
