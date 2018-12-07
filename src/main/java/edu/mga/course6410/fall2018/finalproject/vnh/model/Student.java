@@ -7,4 +7,7 @@ import lombok.Setter;
 @Setter
 public class Student extends Applicant{
 
+    public Student(User user) {
+        super(user);
+    }
 }
