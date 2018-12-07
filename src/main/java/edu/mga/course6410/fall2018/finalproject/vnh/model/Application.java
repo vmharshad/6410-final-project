@@ -2,12 +2,7 @@ package edu.mga.course6410.fall2018.finalproject.vnh.model;
 
 import java.util.UUID;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -24,7 +19,11 @@ public class Application {
     @Column(nullable = false, unique = false)
     int satScore;
 
-//    List<Reference> referenceList;
+    @ManyToOne
+    @JoinColumn(name="applicant_username")
+    Applicant applicant;
+
+    //    List<Reference> referenceList;
     @Column(nullable = true, unique = false)
     String reference1;
     @Column(nullable = true, unique = false)
@@ -64,6 +63,6 @@ public class Application {
     private UUID id;
 
     public enum Status {
-        APPLIED, REVIEWED, ADMITTED, REJECTED;
+        APPLIED, REVIEWED, ADMITTED, REJECTED_DISQUALIFIED, REJECTED_INCOMPLETE;
     }
 }
