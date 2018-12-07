@@ -14,7 +14,7 @@
     <script src="resources/scripts/prototypePre.js"></script>
     <script src="data/document.js"></script>
     <script src="resources/scripts/prototypePost.js"></script>
-    <script src="files/applymain/data.js"></script>
+    <!--script src="files/applymain/data.js"></script-->
     <script type="text/javascript">
       $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
@@ -78,6 +78,8 @@
         </div>
       </div>
 
+<form name="applications" action="applications" method="post" modelAttribute = "Application">
+
       <!-- Unnamed (Shape) -->
       <div id="u20" class="ax_default icon">
         <img id="u20_img" class="img " src="images/studenthome/u8.png"/>
@@ -85,7 +87,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u21" class="ax_default text_field">
-        <input id="u21_input" type="text" value=""/>
+        <input id="u21_input" name="satScore" type="text" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -97,12 +99,14 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u23" class="ax_default button">
+      <div id="u23" class="ax_default button" onclick=>
         <div id="u23_div" class=""></div>
         <div id="u23_text" class="text ">
-          <p><span>Submit application</span></p>
+          <p><span onclick="document.forms['applications'].submit();">Submit application</span></p>
         </div>
       </div>
+
+      <input type="submit" value="Submit Application"/>
 
       <!-- Unnamed (Rectangle) -->
       <div id="u24" class="ax_default label">
@@ -122,7 +126,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u26" class="ax_default text_field">
-        <input id="u26_input" type="text" value=""/>
+        <input id="u26_input" type="text" name="alumnusParentName" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -146,7 +150,7 @@
 
         <!-- Unnamed (Droplist) -->
         <div id="u30" class="ax_default droplist">
-          <select id="u30_input">
+          <select id="u30_input" name="courseOffering">
           </select>
         </div>
 
@@ -160,7 +164,7 @@
 
         <!-- Unnamed (Text Field) -->
         <div id="u32" class="ax_default text_field">
-          <input id="u32_input" type="text" value=""/>
+          <input id="u32_input" type="text" name="termYear" value=""/>
         </div>
 
         <!-- Unnamed (Rectangle) -->
@@ -173,7 +177,7 @@
 
         <!-- Unnamed (Droplist) -->
         <div id="u34" class="ax_default droplist">
-          <select id="u34_input">
+          <select id="u34_input" name="term">
             <option value="Fall">Fall</option>
             <option value="Summer">Summer</option>
             <option value="Spring">Spring</option>
@@ -182,7 +186,7 @@
 
         <!-- Unnamed (Text Field) -->
         <div id="u35" class="ax_default text_field">
-          <input id="u35_input" type="text" value=""/>
+          <input id="u35_input" type="text" name="attendedSchool" value=""/>
         </div>
 
         <!-- Unnamed (Rectangle) -->
@@ -195,7 +199,7 @@
 
         <!-- Unnamed (Text Field) -->
         <div id="u37" class="ax_default text_field">
-          <input id="u37_input" type="text" value=""/>
+          <input id="u37_input" type="text" name="attendedSchoolYear" value=""/>
         </div>
       </div>
 
@@ -209,12 +213,12 @@
 
       <!-- Unnamed (Text Area) -->
       <div id="u39" class="ax_default text_area">
-        <textarea id="u39_input"></textarea>
+        <textarea id="u39_input" name="reference1"></textarea>
       </div>
 
       <!-- Unnamed (Text Area) -->
       <div id="u40" class="ax_default text_area">
-        <textarea id="u40_input"></textarea>
+        <textarea id="u40_input" name="reference2"></textarea>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -227,7 +231,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u42" class="ax_default text_field">
-        <input id="u42_input" type="text" value=""/>
+        <input id="u42_input" type="text" name="alumnusParentGradYear" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -237,6 +241,7 @@
           <p><span>Allumni Parent Graduation Year&nbsp; </span></p>
         </div>
       </div>
+      </form>
     </div>
   </body>
 </html>

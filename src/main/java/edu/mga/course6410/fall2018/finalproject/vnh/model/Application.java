@@ -31,15 +31,31 @@ public class Application {
     String reference2;
 
     @Column(nullable = true, unique = false)
-    String alumnusParentId;
+    String alumnusParentName;
 
-    @Enumerated(EnumType.STRING)
-    @Column
-    CourseOfferings courseOffering;
+    @Column(nullable = false, unique = false)
+    int alumnusParentGradYear;
+
+    @Column(nullable = false, unique = false)
+    String courseOffering;
+
+    @Column(nullable = false, unique = false)
+    String term;
+
+    @Column(nullable = false, unique = false)
+    int termYear;
+
+    @Column(nullable = false, unique = false)
+    String attendedSchool;
+
+    @Column(nullable = false, unique = false)
+    int attendedSchoolYear;
 
     @Enumerated(EnumType.STRING)
     @Column
     Status status;
+
+
 
     @Id
     @GeneratedValue(generator = "UUID")

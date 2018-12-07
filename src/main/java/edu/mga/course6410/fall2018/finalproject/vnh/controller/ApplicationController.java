@@ -73,6 +73,6 @@ public class ApplicationController {
         Application savedApplication = applicationRepository.save(application);
         System.out.println(savedApplication.getId());
         System.out.println("savedApplication = " + savedApplication.getSatScore());
-        return "applications";
+        return "studenthome";
     }
 }
