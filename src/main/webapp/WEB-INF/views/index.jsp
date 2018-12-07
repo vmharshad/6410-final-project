@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Index</title>
@@ -14,7 +14,7 @@
     <script src="resources/scripts/prototypePre.js"></script>
     <script src="data/document.js"></script>
     <script src="resources/scripts/prototypePost.js"></script>
-    <script src="files/index/data.js"></script>
+    <script src="files/index/data1.js"></script>
     <script type="text/javascript">
       $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
@@ -23,7 +23,7 @@
   </head>
   <body>
     <div id="base" class="">
-
+	<form name="loginForm" action="/user/login" method="post">
       <!-- Unnamed (Rectangle) -->
       <div id="u124" class="ax_default box_2">
         <div id="u124_div" class=""></div>
@@ -36,7 +36,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u126" class="ax_default text_field">
-        <input id="u126_input" type="text" value=""/>
+        <input id="u126_input" type="text" name="username" tabindex="1" placeholder="username" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -49,7 +49,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u128" class="ax_default text_field">
-        <input id="u128_input" type="text" value=""/>
+        <input id="u128_input" type="text" name="password" tabindex="2" placeholder="password"  value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -61,20 +61,22 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u130" class="ax_default button">
+      <div id="u130" class="ax_default button" onclick="document.forms['loginForm'].submit();">
         <div id="u130_div" class=""></div>
         <div id="u130_text" class="text ">
           <p><span>Login</span></p>
         </div>
       </div>
-
+      </form>
+	<form name="createAccount" action="/user/registration" method="get">
       <!-- Unnamed (Rectangle) -->
-      <div id="u131" class="ax_default button">
+      <div id="u131" class="ax_default button" onclick="document.forms['createAccount'].submit();">
         <div id="u131_div" class=""></div>
         <div id="u131_text" class="text ">
           <p><span>Create Account</span></p>
         </div>
       </div>
+      </form>
 
       <!-- Unnamed (Rectangle) -->
       <div id="u132" class="ax_default label">

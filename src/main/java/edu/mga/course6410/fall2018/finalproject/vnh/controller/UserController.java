@@ -37,7 +37,7 @@ public class UserController {
 				return null;
 			}
 		}
-		return "/login";
+		return "redirect:/";
 	}
 
 	private boolean validUser(User user, String error) {
@@ -78,12 +78,12 @@ public class UserController {
 			return null;
 		}
 		model.addAttribute("username", registered.getUsername());
-		return "redirect:/applications";
+		return "redirect:/studenthome";
 	}
 
 	@GetMapping(value = "/login")
 	public String showLoginForm(@ModelAttribute User user, Model model) {
 		System.out.println("login page");
-		return "/login";
+		return "redirect:/";
 	}
 }
