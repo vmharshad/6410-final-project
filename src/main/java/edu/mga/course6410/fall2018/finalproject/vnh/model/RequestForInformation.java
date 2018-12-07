@@ -29,28 +29,8 @@ public class RequestForInformation {
 	private String lastName;
 	@Column(nullable = false, unique = true)
 	private String email;
-	@Column(nullable = false, unique = true)
-	private String streetAddress;
-	@Column(nullable = false, unique = true)
-	private String phoneNumber;
-	@Column(nullable = false, unique = true)
-	private String city;
-	@Column(nullable = false, unique = true)
-	private String state;
-	@Column(nullable = false, unique = true)
-	private String zip;
 
 	// Anticipated Info
 	@Column(nullable = false, unique = true)
 	private String anticipatedProgram;
-	@Column(nullable = false, unique = true)
-	private String anticipatedStartTerm;
-	@Column(nullable = false, unique = true)
-	private String anticipatedYear;
-	@Column(nullable = false, unique = true)
-	private String highSchool;
-	@Column(nullable = false, unique = true)
-	private String otherQuestions;
-	@Enumerated(EnumType.STRING)
-	private RFIStatus rfiStatus = RFIStatus.REQUESTED;
 }
