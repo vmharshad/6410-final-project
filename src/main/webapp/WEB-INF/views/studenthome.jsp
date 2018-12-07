@@ -1,24 +1,24 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>StudentHome</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
-    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
-    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
-    <link href="files/studenthome/styles.css" type="text/css" rel="stylesheet"/>
-    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
-    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
-    <script src="resources/scripts/prototypePre.js"></script>
-    <script src="data/document.js"></script>
-    <script src="resources/scripts/prototypePost.js"></script>
-    <script src="files/studenthome/data.js"></script>
+    <link href="/resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="/resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="/data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="/files/studenthome/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="/resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="/resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="/resources/scripts/prototypePre.js"></script>
+    <script src="/data/document.js"></script>
+    <script src="/resources/scripts/prototypePost.js"></script>
+    <!-- script src="files/studenthome/data.js"></script> -->
     <script type="text/javascript">
-      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
-      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
-      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+      $axure.utils.getTransparentGifPath = function() { return '/resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return '/resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return '/resources/reload.html'; };
     </script>
   </head>
   <body>
@@ -38,7 +38,7 @@
 
           <!-- Unnamed (Menu Item) -->
           <div id="u3" class="ax_default menu_item">
-            <img id="u3_img" class="img " src="images/studenthome/u3.png"/>
+            <img id="u3_img" class="img " src="/images/studenthome/u3.png"/>
             <div id="u3_text" class="text ">
               <p><span>Home</span></p>
             </div>
@@ -46,7 +46,7 @@
 
           <!-- Unnamed (Menu Item) -->
           <div id="u4" class="ax_default menu_item">
-            <img id="u4_img" class="img " src="images/studenthome/u4.png"/>
+            <img id="u4_img" class="img " src="/images/studenthome/u4.png"/>
             <div id="u4_text" class="text ">
               <p><span>Request For Info</span></p>
             </div>
@@ -54,7 +54,7 @@
 
           <!-- Unnamed (Menu Item) -->
           <div id="u5" class="ax_default menu_item">
-            <img id="u5_img" class="img " src="images/studenthome/u5.png"/>
+            <img id="u5_img" class="img " src="/images/studenthome/u5.png"/>
             <div id="u5_text" class="text ">
               <p><span>Apply</span></p>
             </div>
@@ -62,7 +62,7 @@
 
           <!-- Unnamed (Menu Item) -->
           <div id="u6" class="ax_default menu_item">
-            <img id="u6_img" class="img " src="images/studenthome/u6.png"/>
+            <img id="u6_img" class="img " src="/images/studenthome/u6.png"/>
             <div id="u6_text" class="text ">
               <p><span>View Application Status</span></p>
             </div>
@@ -70,7 +70,7 @@
 
           <!-- Unnamed (Menu Item) -->
           <div id="u7" class="ax_default menu_item">
-            <img id="u7_img" class="img " src="images/studenthome/u7.png"/>
+            <img id="u7_img" class="img " src="/images/studenthome/u7.png"/>
             <div id="u7_text" class="text ">
               <p><span>Help</span></p>
             </div>
@@ -80,7 +80,7 @@
 
       <!-- Unnamed (Shape) -->
       <div id="u8" class="ax_default icon">
-        <img id="u8_img" class="img " src="images/studenthome/u8.png"/>
+        <img id="u8_img" class="img " src="/images/studenthome/u8.png"/>
       </div>
 
       <!-- Unnamed (Rectangle) -->

@@ -1,29 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Create Account</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
-    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
-    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
-    <link href="files/create_account/styles.css" type="text/css" rel="stylesheet"/>
-    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
-    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
-    <script src="resources/scripts/prototypePre.js"></script>
-    <script src="data/document.js"></script>
-    <script src="resources/scripts/prototypePost.js"></script>
-    <script src="files/create_account/data.js"></script>
+    <link href="/resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="/resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="/data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="/files/create_account/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="/resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="/resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="/resources/scripts/prototypePre.js"></script>
+    <script src="/data/document.js"></script>
+    <script src="/resources/scripts/prototypePost.js"></script>
+    <script src="/files/create_account/data1.js"></script>
     <script type="text/javascript">
-      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
-      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
-      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+      $axure.utils.getTransparentGifPath = function() { return '/resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return '/resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return '/resources/reload.html'; };
     </script>
   </head>
   <body>
     <div id="base" class="">
-
+	<form name="createAccount" action="/user/registration" method="post">
       <!-- Unnamed (Rectangle) -->
       <div id="u147" class="ax_default box_2">
         <div id="u147_div" class=""></div>
@@ -31,7 +31,7 @@
 
       <!-- Unnamed (Shape) -->
       <div id="u148" class="ax_default icon">
-        <img id="u148_img" class="img " src="images/studenthome/u8.png"/>
+        <img id="u148_img" class="img " src="/images/studenthome/u8.png"/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -41,7 +41,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u150" class="ax_default text_field">
-        <input id="u150_input" type="text" value=""/>
+        <input id="u150_input" type="text" name="username" tabindex="8" placeholder="username" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -54,7 +54,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u152" class="ax_default text_field">
-        <input id="u152_input" type="text" value=""/>
+        <input id="u152_input" type="text" name="confirmPassword" tabindex="9" placeholder="confirm password" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -67,7 +67,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u154" class="ax_default text_field">
-        <input id="u154_input" type="text" value=""/>
+        <input id="u154_input" type="text" name="password" tabindex="9" placeholder="password" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -87,7 +87,7 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u157" class="ax_default button">
+      <div id="u157" class="ax_default button" onclick="document.forms['createAccount'].submit();">
         <div id="u157_div" class=""></div>
         <div id="u157_text" class="text ">
           <p><span>Create Account</span></p>
@@ -98,7 +98,7 @@
       <div id="u158" class="ax_default label">
         <div id="u158_div" class=""></div>
         <div id="u158_text" class="text ">
-          <p><span>Error: </span></p>
+          <p><span></span></p>
         </div>
       </div>
 
@@ -109,12 +109,12 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u160" class="ax_default text_field">
-        <input id="u160_input" type="text" value=""/>
+        <input id="u160_input" type="text" tabindex="1" name="firstName" placeholder="First Name" value=""/>
       </div>
 
       <!-- Unnamed (Text Field) -->
       <div id="u161" class="ax_default text_field">
-        <input id="u161_input" type="text" value=""/>
+        <input id="u161_input" type="text" tabindex="2" name="lastName"  placeholder="Last Name" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -127,7 +127,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u163" class="ax_default text_field">
-        <input id="u163_input" type="text" value=""/>
+        <input id="u163_input" type="text" tabindex="3" name="email"  placeholder="email@email.com" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -140,12 +140,12 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u165" class="ax_default text_field">
-        <input id="u165_input" type="text" value=""/>
+        <input id="u165_input" type="text" tabindex="4" name="street"  placeholder="Street" value=""/>
       </div>
 
       <!-- Unnamed (Text Field) -->
       <div id="u166" class="ax_default text_field">
-        <input id="u166_input" type="text" value=""/>
+        <input id="u166_input" type="text" tabindex="5" name="city"  placeholder="City"  value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -158,7 +158,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u168" class="ax_default text_field">
-        <input id="u168_input" type="text" value=""/>
+        <input id="u168_input" type="text" tabindex="6" name="zip"  placeholder="City" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -179,8 +179,56 @@
 
       <!-- Unnamed (Droplist) -->
       <div id="u171" class="ax_default droplist">
-        <select id="u171_input">
-        </select>
+        <select id="u171_input" name="state" tabindex="7"><option>Please Select...</option><option>AL</option>
+				<option>AK</option>
+				<option>AZ</option>
+				<option>AR</option>
+				<option>CA</option>
+				<option>CO</option>
+				<option>CT</option>
+				<option>DE</option>
+				<option>FL</option>
+				<option>GA</option>
+				<option>HI</option>
+				<option>ID</option>
+				<option>IL</option>
+				<option>IN</option>
+				<option>IA</option>
+				<option>KS</option>
+				<option>KY</option>
+				<option>LA</option>
+				<option>ME</option>
+				<option>MD</option>
+				<option>MA</option>
+				<option>MI</option>
+				<option>MN</option>
+				<option>MS</option>
+				<option>MO</option>
+				<option>MT</option>
+				<option>NE</option>
+				<option>NV</option>
+				<option>NH</option>
+				<option>NJ</option>
+				<option>NM</option>
+				<option>NY</option>
+				<option>NC</option>
+				<option>ND</option>
+				<option>OH</option>
+				<option>OK</option>
+				<option>OR</option>
+				<option>PA</option>
+				<option>RI</option>
+				<option>SC</option>
+				<option>SD</option>
+				<option>TN</option>
+				<option>TX</option>
+				<option>UT</option>
+				<option>VT</option>
+				<option>VA</option>
+				<option>WA</option>
+				<option>WV</option>
+				<option>WI</option>
+				<option>WY</option></select>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -206,17 +254,17 @@
           <p><span>Personal Information</span></p>
         </div>
       </div>
-
+	</form>
       <!-- Unnamed (Menu) -->
       <div id="u175" class="ax_default">
-        <img id="u175_menu" class="img " src="images/studenthome/u1_menu.png" alt="u175_menu"/>
+        <img id="u175_menu" class="img " src="/images/studenthome/u1_menu.png" alt="u175_menu"/>
 
         <!-- Unnamed (Table) -->
         <div id="u176" class="ax_default">
 
           <!-- Unnamed (Menu Item) -->
           <div id="u177" class="ax_default menu_item">
-            <img id="u177_img" class="img " src="images/studenthome/u3.png"/>
+            <img id="u177_img" class="img " src="/images/studenthome/u3.png"/>
             <div id="u177_text" class="text ">
               <p><span>Home</span></p>
             </div>
@@ -224,7 +272,7 @@
 
           <!-- Unnamed (Menu Item) -->
           <div id="u178" class="ax_default menu_item">
-            <img id="u178_img" class="img " src="images/viewapplicationstatus/u141.png"/>
+            <img id="u178_img" class="img " src="/images/viewapplicationstatus/u141.png"/>
             <div id="u178_text" class="text ">
               <p><span>Request For Info</span></p>
             </div>
@@ -232,7 +280,7 @@
 
           <!-- Unnamed (Menu Item) -->
           <div id="u179" class="ax_default menu_item">
-            <img id="u179_img" class="img " src="images/requestforinfoformmain/u49.png"/>
+            <img id="u179_img" class="img " src="/images/requestforinfoformmain/u49.png"/>
             <div id="u179_text" class="text ">
               <p><span>Apply</span></p>
             </div>
@@ -240,7 +288,7 @@
 
           <!-- Unnamed (Menu Item) -->
           <div id="u180" class="ax_default menu_item">
-            <img id="u180_img" class="img " src="images/studenthome/u6.png"/>
+            <img id="u180_img" class="img " src="/images/studenthome/u6.png"/>
             <div id="u180_text" class="text ">
               <p><span>View Application Status</span></p>
             </div>
@@ -248,7 +296,7 @@
 
           <!-- Unnamed (Menu Item) -->
           <div id="u181" class="ax_default menu_item">
-            <img id="u181_img" class="img " src="images/studenthome/u7.png"/>
+            <img id="u181_img" class="img " src="/images/studenthome/u7.png"/>
             <div id="u181_text" class="text ">
               <p><span>Help</span></p>
             </div>
