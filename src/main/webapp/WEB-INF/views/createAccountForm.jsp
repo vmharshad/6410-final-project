@@ -54,7 +54,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u152" class="ax_default text_field">
-        <input id="u152_input" type="text" name="confirmPassword" tabindex="9" placeholder="confirm password" value=""/>
+        <input id="u152_input" type="password" name="confirmPassword" tabindex="10" placeholder="confirm password" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -67,7 +67,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u154" class="ax_default text_field">
-        <input id="u154_input" type="text" name="password" tabindex="9" placeholder="password" value=""/>
+        <input id="u154_input" type="password" name="password" tabindex="9" placeholder="password" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
