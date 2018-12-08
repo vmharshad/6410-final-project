@@ -306,12 +306,12 @@
 
       <!-- Unnamed (Text Area) -->
       <div id="u39" class="ax_default text_area">
-        <textarea id="u39_input" name="reference1" placeholder="Reference 1" tabindex="2"></textarea>
+        <textarea id="u39_input" name="reference1" placeholder="Please include following information: Referral Name, Email, Phone Number and Reference Text" tabindex="2"></textarea>
       </div>
 
       <!-- Unnamed (Text Area) -->
       <div id="u40" class="ax_default text_area">
-        <textarea id="u40_input" name="reference2" placeholder="Reference 2" tabindex="3"></textarea>
+        <textarea id="u40_input" name="reference2" placeholder="Please include following information: Referral Name, Email, Phone Number and Reference Text" tabindex="3"></textarea>
       </div>
 
       <!-- Unnamed (Rectangle) -->
