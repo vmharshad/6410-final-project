@@ -24,6 +24,18 @@ public class UserController {
 		System.out.println("createAccountForm");
 		return "createAccountForm";
 	}
+	
+	@GetMapping(value = "/studenthome")
+	public String getStudentHomeForm() {
+		System.out.println("studenthome");
+		return "studenthome";
+	}
+	
+	@GetMapping(value = "/staffhome")
+	public String getStaffHomeForm() {
+		System.out.println("staffhome");
+		return "staffhome";
+	}
 
 	@PostMapping(value = "/registration")
 	public String registerUserAccount(@ModelAttribute User user, Model model) {
@@ -95,7 +107,6 @@ public class UserController {
 		}
 		model.addAttribute("username", registered.getUsername());
 		model.addAttribute("firstname", registered.getFirstName());
-//		String redirect = registered.getUsername().equals("admin") ? "staffhome":"studenthome";
 		return "studenthome";
 	}
 

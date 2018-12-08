@@ -1,21 +1,42 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>ApplyMain</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
-    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
-    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
-    <link href="files/applymain/styles.css" type="text/css" rel="stylesheet"/>
-    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
-    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
-    <script src="resources/scripts/prototypePre.js"></script>
-    <script src="data/document.js"></script>
-    <script src="resources/scripts/prototypePost.js"></script>
+    <link href="/resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="/resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="/data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="/files/applymain/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="/resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="/resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="/resources/scripts/prototypePre.js"></script>
+    <script src="/data/document.js"></script>
+    <script src="/resources/scripts/prototypePost.js"></script>
     <!--script src="files/applymain/data.js"></script-->
     <script type="text/javascript">
+    function validateForm()
+            {
+                var satScore = document.forms["applications"]["satScore"].value;
+                var reference1 = document.forms["applications"]["reference1"].value;
+                var reference2 = document.forms["applications"]["reference2"].value;
+                var courseOffering = document.forms["applications"]["courseOffering"].value;
+                var term = document.forms["applications"]["term"].value;
+                var termYear = document.forms["applications"]["termYear"].value;
+                var attendedSchool = document.forms["applications"]["attendedSchool"].value;
+                var attendedSchoolYear = document.forms["applications"]["attendedSchoolYear"].value;
+
+                if(satScore == "" || reference1 == "" || reference2 == "" || courseOffering == "" || term == "" || termYear == "" || attendedSchool == "" || attendedSchoolYear == "")
+                {
+                    alert("All Fields except Alumni parent information are mandatory to fill in application");
+                    return (false);
+                }
+                else
+                {
+                        document.forms['applications'].submit();
+                }
+            }
       $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
@@ -31,46 +52,57 @@
 
       <!-- Unnamed (Menu) -->
       <div id="u13" class="ax_default">
-        <img id="u13_menu" class="img " src="images/studenthome/u1_menu.png" alt="u13_menu"/>
+        <img id="u13_menu" class="img " src="/images/studenthome/u1_menu.png" alt="u13_menu"/>
 
         <!-- Unnamed (Table) -->
         <div id="u14" class="ax_default">
 
+			<form name="viewapplications" action="/user/studenthome" method="get" onclick="document.forms['viewapplications'].submit();">
+		
           <!-- Unnamed (Menu Item) -->
-          <div id="u15" class="ax_default menu_item">
-            <img id="u15_img" class="img " src="images/applymain/u15.png"/>
+          <div id="u15" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+            <img id="u15_img" class="img " src="/images/applymain/u15.png"/>
             <div id="u15_text" class="text ">
               <p><span>Home</span></p>
             </div>
           </div>
+          </form>
 
+		<form name="requestForInfo" action="/requestforinfo" method="get" onclick="document.forms['requestForInfo'].submit();">
+        
           <!-- Unnamed (Menu Item) -->
-          <div id="u16" class="ax_default menu_item">
-            <img id="u16_img" class="img " src="images/studenthome/u4.png"/>
+          <div id="u16" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+            <img id="u16_img" class="img " src="/images/studenthome/u4.png"/>
             <div id="u16_text" class="text ">
               <p><span>Request For Info</span></p>
             </div>
           </div>
+          </form>
 
+		<form name="apply" action="/applications" method="get" onclick="document.forms['apply'].submit();" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+        
           <!-- Unnamed (Menu Item) -->
-          <div id="u17" class="ax_default menu_item">
-            <img id="u17_img" class="img " src="images/applymain/u17.png"/>
+          <div id="u17" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+            <img id="u17_img" class="img " src="/images/applymain/u17.png"/>
             <div id="u17_text" class="text ">
               <p><span>Apply</span></p>
             </div>
           </div>
-
+          </form>
+		<form name="applicationStatus" action="/applications/applicationstatus" method="get" onclick="document.forms['applicationStatus'].submit();">
+          
           <!-- Unnamed (Menu Item) -->
-          <div id="u18" class="ax_default menu_item">
-            <img id="u18_img" class="img " src="images/studenthome/u6.png"/>
+          <div id="u18" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+            <img id="u18_img" class="img " src="/images/studenthome/u6.png"/>
             <div id="u18_text" class="text ">
               <p><span>View Application Status</span></p>
             </div>
           </div>
+          </form>
 
           <!-- Unnamed (Menu Item) -->
           <div id="u19" class="ax_default menu_item">
-            <img id="u19_img" class="img " src="images/studenthome/u7.png"/>
+            <img id="u19_img" class="img " src="/images/studenthome/u7.png"/>
             <div id="u19_text" class="text ">
               <p><span>Help</span></p>
             </div>
@@ -82,12 +114,12 @@
 
       <!-- Unnamed (Shape) -->
       <div id="u20" class="ax_default icon">
-        <img id="u20_img" class="img " src="images/studenthome/u8.png"/>
+        <img id="u20_img" class="img " src="/images/studenthome/u8.png"/>
       </div>
 
       <!-- Unnamed (Text Field) -->
       <div id="u21" class="ax_default text_field">
-        <input id="u21_input" name="satScore" type="text" value=""/>
+        <input id="u21_input" name="satScore" placeholder="SAT Score" tabindex="1" type="text" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -102,7 +134,7 @@
       <div id="u23" class="ax_default button" onclick=>
         <div id="u23_div" class=""></div>
         <div id="u23_text" class="text ">
-          <p><span onclick="document.forms['applications'].submit();">Submit application</span></p>
+          <p><span tabindex="11" onclick="validateForm();">Submit application</span></p>
         </div>
       </div>
 
@@ -126,14 +158,14 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u26" class="ax_default text_field">
-        <input id="u26_input" type="text" name="alumnusParentName" value=""/>
+        <input id="u26_input" type="text" name="alumnusParentName" placeholder="Alumni Parent Name" tabindex="4" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
       <div id="u27" class="ax_default label">
         <div id="u27_div" class=""></div>
         <div id="u27_text" class="text ">
-          <p><span>Allumni Parent Name&nbsp; </span></p>
+          <p><span>Alumni Parent Name&nbsp; </span></p>
         </div>
       </div>
 
@@ -150,7 +182,7 @@
 
         <!-- Unnamed (Droplist) -->
         <div id="u30" class="ax_default droplist">
-          <select id="u30_input" name="courseOffering">
+          <select id="u30_input" name="courseOffering" tabindex="6">
           <option value="">Please select...</option>
           					<option value="tfa_196" id="tfa_196" class="">Information Technology, M.S.</option>
           					<option value="tfa_200" id="tfa_200" class="">Aviation Science and Management, B.S.</option>
@@ -223,7 +255,7 @@
 
         <!-- Unnamed (Text Field) -->
         <div id="u32" class="ax_default text_field">
-          <input id="u32_input" type="text" name="termYear" value=""/>
+          <input id="u32_input" type="text" name="termYear" placeholder="Term Year" tabindex="8" value=""/>
         </div>
 
         <!-- Unnamed (Rectangle) -->
@@ -236,7 +268,8 @@
 
         <!-- Unnamed (Droplist) -->
         <div id="u34" class="ax_default droplist">
-          <select id="u34_input" name="term">
+          <select id="u34_input" name="term" tabindex="7">
+            <option value="">Please select...</option>
             <option value="Fall">Fall</option>
             <option value="Summer">Summer</option>
             <option value="Spring">Spring</option>
@@ -245,7 +278,7 @@
 
         <!-- Unnamed (Text Field) -->
         <div id="u35" class="ax_default text_field">
-          <input id="u35_input" type="text" name="attendedSchool" value=""/>
+          <input id="u35_input" type="text" name="attendedSchool" placeholder="Attended School" tabindex="9" value=""/>
         </div>
 
         <!-- Unnamed (Rectangle) -->
@@ -258,7 +291,7 @@
 
         <!-- Unnamed (Text Field) -->
         <div id="u37" class="ax_default text_field">
-          <input id="u37_input" type="text" name="attendedSchoolYear" value=""/>
+          <input id="u37_input" type="text" name="attendedSchoolYear" placeholder="Attended Year" tabindex="10" value=""/>
         </div>
       </div>
 
@@ -272,12 +305,12 @@
 
       <!-- Unnamed (Text Area) -->
       <div id="u39" class="ax_default text_area">
-        <textarea id="u39_input" name="reference1"></textarea>
+        <textarea id="u39_input" name="reference1" placeholder="Reference 1" tabindex="2"></textarea>
       </div>
 
       <!-- Unnamed (Text Area) -->
       <div id="u40" class="ax_default text_area">
-        <textarea id="u40_input" name="reference2"></textarea>
+        <textarea id="u40_input" name="reference2" placeholder="Reference 2" tabindex="3"></textarea>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -290,14 +323,14 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u42" class="ax_default text_field">
-        <input id="u42_input" type="text" name="alumnusParentGradYear" value=""/>
+        <input id="u42_input" type="text" name="alumnusParentGradYear" placeholder="Alumni Parent Grad Year" tabindex="5" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
       <div id="u43" class="ax_default label">
         <div id="u43_div" class=""></div>
         <div id="u43_text" class="text ">
-          <p><span>Allumni Parent Graduation Year&nbsp; </span></p>
+          <p><span>Alumni Parent Graduation Year&nbsp; </span></p>
         </div>
       </div>
       </form>

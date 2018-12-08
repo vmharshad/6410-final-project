@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>RequestForInfoResponse</title>
@@ -43,14 +43,16 @@
 
         <!-- Unnamed (Table) -->
         <div id="u66" class="ax_default">
-
+			<form name="apply" action="/applications" method="get" onclick="document.forms['apply'].submit();" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+        
           <!-- Unnamed (Menu Item) -->
-          <div id="u67" class="ax_default menu_item">
+          <div id="u67" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
             <img id="u67_img" class="img " src="images/applymain/u15.png"/>
             <div id="u67_text" class="text ">
               <p><span>Home</span></p>
             </div>
           </div>
+          </form>
 
           <!-- Unnamed (Menu Item) -->
           <div id="u68" class="ax_default menu_item">
@@ -60,21 +62,26 @@
             </div>
           </div>
 
+	<form name="apply" action="/applications" method="get" onclick="document.forms['apply'].submit();" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+        
           <!-- Unnamed (Menu Item) -->
-          <div id="u69" class="ax_default menu_item">
+          <div id="u69" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
             <img id="u69_img" class="img " src="images/requestforinfoformmain/u49.png"/>
             <div id="u69_text" class="text ">
               <p><span>Apply</span></p>
             </div>
           </div>
-
+          </form>
+<form name="applicationStatus" action="/applications/applicationstatus" method="get" onclick="document.forms['applicationStatus'].submit();">
+        
           <!-- Unnamed (Menu Item) -->
-          <div id="u70" class="ax_default menu_item">
+          <div id="u70" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
             <img id="u70_img" class="img " src="images/studenthome/u6.png"/>
             <div id="u70_text" class="text ">
               <p><span>View Application Status</span></p>
             </div>
           </div>
+          </form>
 
           <!-- Unnamed (Menu Item) -->
           <div id="u71" class="ax_default menu_item">
