@@ -107,7 +107,7 @@
       <div id="u35" class="ax_default heading_1">
         <div id="u35_div" class=""></div>
         <div id="u35_text" class="text ">
-          <p><span>Welcome to the Middle Georgia University !!</span></p>
+          <p><span>Welcome to the Middle Georgia State University !!</span></p>
         </div>
       </div>
     </div>

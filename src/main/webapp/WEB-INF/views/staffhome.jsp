@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <title>StaffHome</title>
@@ -38,7 +38,7 @@
       <div id="u76" class="ax_default heading_1">
         <div id="u76_div" class=""></div>
         <div id="u76_text" class="text ">
-          <p><span>Welcome to the Middle Georgia University !!</span></p>
+          <p><span>Welcome to the Middle Georgia State University !!</span></p>
         </div>
       </div>
 

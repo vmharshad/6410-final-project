@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <html>
   <head>
     <title>ViewApplications</title>
@@ -20,6 +22,12 @@
       $axure.utils.getOtherPath = function() { return '/resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return '/resources/reload.html'; };
     </script>
+    <script type="text/javascript">
+       function reviewApplication($i) {
+           document.forms['applicationlist'].action = "/applications/review/" + $i;
+           document.forms['applicationlist'].submit();
+       }
+      </script>
   </head>
   <body>
     <div id="base" class="">
@@ -34,12 +42,21 @@
         <img id="u115_img" class="img " src="/images/studenthome/u8.png"/>
       </div>
 
+      <form name="applicationlist" action="applications/review/">
+      </form
+
       <!-- Unnamed (List Box) -->
       <div id="u116" class="ax_default list_box">
-        <select id="u116_input" size="2">
-          <option value="Application1: Vaibhav, Software Engineering, Date Applied: Jun10 2018 Status: Applied">Application1: Vaibhav, Software Engineering, Date Applied: Jun10 2018 Status: Applied</option>
-          <option value="Application2: Harshad, Software Engineering, Date Applied: Jun10 2018 , Status: Applied">Application2: Harshad, Software Engineering, Date Applied: Jun10 2018 , Status: Applied</option>
-          <option value="Application3: Nazneen, Software Engineering, Date Applied: Jun10 2018 , Status: Applied">Application3: Nazneen, Software Engineering, Date Applied: Jun10 2018 , Status: Applied</option>
+        <select id="u116_input" size="2" onchange="reviewApplication(value);">
+    <c:if test="${not empty applicationList}">
+
+        			<c:forEach var="application" items="${applicationList}">
+    <option value="${application.id}"> ${application.applicant.lastName}, ${application.applicant.firstName} - ${application.courseOffering} - ${application.term} ${application.termYear} - ${application.status} </option>
+
+      			</c:forEach>
+      	</c:if>
+
+
         </select>
       </div>
 
@@ -66,7 +83,7 @@
         <!-- Unnamed (Table) -->
         <div id="u120" class="ax_default">
 
-		<form name="viewapplications" action="/user/staffhome" method="get" onclick="document.forms['viewapplications'].submit();">
+		<form name="home" action="/user/staffhome" method="get" onclick="document.forms['home'].submit();">
 		
           <!-- Unnamed (Menu Item) -->
           <div id="u121" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
@@ -96,45 +113,6 @@
           </div>
         </div>
       </div>
-
-
-          <form
-            <!-- Unnamed (Rectangle) -->
-            <div id="u146" class="ax_default box_2">
-              <div id="u146_div" class="">
-
-
-
-          <div>
-              <table border=1>
-              <tr>
-                  <th width="50%"><div class="text"><p><span>ID</span><p></div></th>
-                  <th width="30%"><div class="text"><p><span>Course</span><p></div></th>
-                  <th width="20%"><div class="text"><p><span>Term</span><p></div></th>
-                  <th width="30%"><div class="text"><p><span>Status</span><p></div></th>
-                  </tr>
-                  <br>
-        <c:if test="${not empty applicationList}">
-
-        			<c:forEach var="application" items="${applicationList}">
-                  <tr>
-
-                  <td><div class="text"><p><span>${application.id}</span><p></div></td>
-                  <td><div class="text"><p><span>${application.courseOffering}</span><p></div></td>
-                  <td><div class="text"><p><span>${application.term} ${application.termYear}</span><p></div></td>
-                  <td><div class="text"><p><span>${application.status}</span><p></div></td>
-
-               </tr>
-               <br>
-      			</c:forEach>
-      	</c:if>
-              </table>
-
-          </div>
-
-              </div>
-            </div>
-            </form>
     </div>
   </body>
 </html>
