@@ -95,7 +95,6 @@ public class UserController {
 		}
 		model.addAttribute("username", registered.getUsername());
 		model.addAttribute("firstname", registered.getFirstName());
-//		String redirect = registered.getUsername().equals("admin") ? "staffhome":"studenthome";
 		return "studenthome";
 	}
 
