@@ -64,15 +64,15 @@
               <p><span>Home</span></p>
             </div>
           </div>
-
+		<form name="viewapplications" action="/applications/all" method="get" onclick="document.forms['viewapplications'].submit();">
           <!-- Unnamed (Menu Item) -->
-          <div id="u81" class="ax_default menu_item">
+          <div id="u81" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
             <img id="u81_img" class="img " src="/images/staffhome/u81.png"/>
             <div id="u81_text" class="text ">
               <p><span>View Applications</span></p>
             </div>
           </div>
-
+		</form>
           <!-- Unnamed (Menu Item) -->
           <div id="u82" class="ax_default menu_item">
             <img id="u82_img" class="img " src="/images/staffhome/u82.png"/>

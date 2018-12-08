@@ -19,6 +19,64 @@
       $axure.utils.getTransparentGifPath = function() { return '/resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return '/resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return '/resources/reload.html'; };
+      function validateForm() {
+    	  var u = document.forms["createAccount"]["username"].value;
+    	  if (u == "") {
+      	    alert("Username must be filled out");
+      	    return false;
+      	  }
+    	  var p = document.forms["createAccount"]["password"].value;
+    	  if (p == "") {
+    	    alert("Password be filled out");
+    	    return false;
+    	  }
+    	  var cp = document.forms["createAccount"]["confirmPassword"].value;
+    	  if (cp == "") {
+    	    alert("Confirm Password be filled out");
+    	    return false;
+    	  }
+    	  if (cp != p) {
+      	    alert("Password and Confirm Password should be same");
+      	    return false;
+      	  }
+    	  
+    	  var fn = document.forms["createAccount"]["firstName"].value;
+    	  if (fn == "") {
+    	    alert("FirstName be filled out");
+    	    return false;
+    	  }
+    	  var fn = document.forms["createAccount"]["lastName"].value;
+    	  if (fn == "") {
+    	    alert("LastName be filled out");
+    	    return false;
+    	  }
+    	  var em = document.forms["createAccount"]["email"].value;
+    	  if (em == "") {
+    	    alert("Email be filled out");
+    	    return false;
+    	  }
+    	  var em = document.forms["createAccount"]["street"].value;
+    	  if (em == "") {
+    	    alert("Street be filled out");
+    	    return false;
+    	  }
+    	  var em = document.forms["createAccount"]["city"].value;
+    	  if (em == "") {
+    	    alert("City be filled out");
+    	    return false;
+    	  }
+    	  var em = document.forms["createAccount"]["zip"].value;
+    	  if (em == "") {
+    	    alert("Zip be filled out");
+    	    return false;
+    	  }
+    	  var em = document.forms["createAccount"]["state"].value;
+    	  if (em == "Please Select...") {
+    	    alert("State be filled out");
+    	    return false;
+    	  }
+    	  document.forms['createAccount'].submit();
+    	}
     </script>
   </head>
   <body>
@@ -87,7 +145,7 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u157" class="ax_default button" onclick="document.forms['createAccount'].submit();">
+      <div id="u157" class="ax_default button" onclick="validateForm()">
         <div id="u157_div" class=""></div>
         <div id="u157_text" class="text ">
           <p><span>Create Account</span></p>

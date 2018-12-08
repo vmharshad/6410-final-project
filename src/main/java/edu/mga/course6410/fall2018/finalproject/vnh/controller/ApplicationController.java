@@ -40,6 +40,12 @@ public class ApplicationController {
         System.out.println("Returning application list");
         return "applicationList";
     }
+    
+    @GetMapping("/applicationstatus")
+    public String getApplicationStatus() {
+        System.out.println("Returning application status");
+        return "viewapplicationstatus";
+    }
 
     @GetMapping("/{id}")
     public String getApplicationById(@PathVariable UUID id, Model model) {
