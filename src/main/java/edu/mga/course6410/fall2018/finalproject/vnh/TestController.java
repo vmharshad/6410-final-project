@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class TestController {
 
-    @GetMapping("/")
+   /* @GetMapping("/")
     public String index() {
         System.out.println("Inside TestController.index");
         return "index";
-    }
+    }*/
 
     @PostMapping("/hello")
     public String sayHello(@RequestParam("name") String name, Model model) {

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import edu.mga.course6410.fall2018.finalproject.vnh.model.User;
 import edu.mga.course6410.fall2018.finalproject.vnh.repository.UserRepository;
@@ -67,7 +68,8 @@ public class UserController {
 					|| !registered.getPassword().equals(user.getPassword())) {
 				System.out.println("Invalid username or password");
 				model.addAttribute("error", "Invalid username or password");
-				return "/";
+				//redirectAttr.addAttribute("error", "Invalid username or password");
+				return "index";
 			}
 			System.out.println("valid login");
 			model.addAttribute("message", "Successfully logged in..");
@@ -78,7 +80,8 @@ public class UserController {
 			return null;
 		}
 		model.addAttribute("username", registered.getUsername());
-		String redirect = registered.getUsername().equals("admin") ? "studenthome":"staffhome";
+		model.addAttribute("firstname", registered.getFirstName());
+		String redirect = registered.getUsername().equals("admin") ? "staffhome":"studenthome";
 		return redirect;
 	}
 
