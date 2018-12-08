@@ -29,13 +29,17 @@ public class UserController {
 	public String registerUserAccount(@ModelAttribute User user, Model model) {
 		System.out.println("submitting createAccountForm");
 		String error = null;
+		if ("admin".equals(user.getUsername())) {
+			model.addAttribute("error", "'admin' is not a valid username.");
+			return "createAccountForm";
+		}
 		if (validUser(user, error)) {
 			try {
 				User registered = userRepository.save(user);
 				System.out.println("created user - " + registered);
 			} catch (Exception e) {
 				model.addAttribute("error", "Error occured creating account.");
-				return null;
+				return "createAccountForm";
 			}
 		}
 		return "redirect:/";
@@ -61,6 +65,10 @@ public class UserController {
 	@PostMapping(value = "/login")
 	public String login(@ModelAttribute User user, Model model) {
 		System.out.println("submit login - username:" + user.getUsername() + ", pwd:" + user.getPassword());
+
+		if ("admin".equals(user.getUsername()) && "admin".equals(user.getPassword()))
+			return "staffhome";
+
 		User registered = null;
 		try {
 			registered = userRepository.getUserByUsername(user.getUsername());
@@ -81,8 +89,8 @@ public class UserController {
 		}
 		model.addAttribute("username", registered.getUsername());
 		model.addAttribute("firstname", registered.getFirstName());
-		String redirect = registered.getUsername().equals("admin") ? "staffhome":"studenthome";
-		return redirect;
+//		String redirect = registered.getUsername().equals("admin") ? "staffhome":"studenthome";
+		return "studenthome";
 	}
 
 	@GetMapping(value = "/login")
