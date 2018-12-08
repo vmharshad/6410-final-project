@@ -89,6 +89,7 @@ public class ApplicationController {
     @GetMapping("/{id}/{status}")
     public String markIncomplete(@PathVariable UUID id, @PathVariable String status, Model model) {
     	System.out.println("Updateing application id" + id.toString() + " to " + status);
+    	List<Application> applicationList = new ArrayList<>();
         if (null == id)
             return "createApplication";
 
@@ -96,9 +97,19 @@ public class ApplicationController {
         application = applicationRepository.findById(id).get();
         application.setStatus(Application.Status.getStatus(status));
         applicationRepository.save(application);
-        System.out.println("application.toString() = " + application.toString());
-        model.addAttribute("application", application);
-        return "applicationList";
+        System.out.println("Returning application list");
+        Iterable<Application> allApplicationList = applicationRepository.findAll();
+
+        for (Application app : allApplicationList) {
+            System.out.println("application = " + app);
+                applicationList.add(app);
+                System.out.println("Adding it");
+
+        }
+        System.out.println("applicationList.size() = " + applicationList.size());
+        model.addAttribute("applicationList", applicationList);
+        model.addAttribute("username", Constants.username);
+        return "viewapplications";
     }
 
 

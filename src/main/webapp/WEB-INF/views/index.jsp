@@ -19,6 +19,13 @@
       $axure.utils.getTransparentGifPath = function() { return '/resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return '/resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return '/resources/reload.html'; };
+      function checkSubmit () {
+    	  var x = event.which || event.keyCode;
+    	  if (x == 13) {
+        	  document.forms['loginForm'].submit();
+          }
+      }
+      
       function validateForm() {
     	  var u = document.forms["loginForm"]["username"].value;
     	  if (u == "") {
@@ -32,6 +39,8 @@
     	  }    	  
     	  document.forms['loginForm'].submit();
     	}
+      
+      
     </script>
   </head>
   <body>
@@ -62,7 +71,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u128" class="ax_default text_field">
-        <input id="u128_input" type="password" name="password" tabindex="2" placeholder="password"  value=""/>
+        <input id="u128_input" type="text" name="password" tabindex="2" placeholder="password" onkeypress="checkSubmit(event)" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
