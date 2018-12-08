@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
-    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
-    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
-    <link href="files/viewapplicationstatus/styles.css" type="text/css" rel="stylesheet"/>
-    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
-    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
-    <script src="resources/scripts/prototypePre.js"></script>
-    <script src="data/document.js"></script>
-    <script src="resources/scripts/prototypePost.js"></script>
-    <script src="files/viewapplicationstatus/data.js"></script>
+    <link href="/resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="/resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="/data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="/files/viewapplicationstatus/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="/resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="/resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="/resources/scripts/prototypePre.js"></script>
+    <script src="/data/document.js"></script>
+    <script src="/resources/scripts/prototypePost.js"></script>
+    <!--script src="/files/viewapplicationstatus/data.js"></script-->
     <script type="text/javascript">
       $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
@@ -107,9 +107,19 @@
         </div>
       </div>
 
+    <form
       <!-- Unnamed (Rectangle) -->
       <div id="u146" class="ax_default box_2">
-        <div id="u146_div" class=""></div>
+        <div id="u146_div" class="">
+<c:if test="${not empty applicationList}">
+
+		<ul>
+			<c:forEach var="application" items="${applicationList}">
+				<li>${application.id}</li>
+			</c:forEach>
+		</ul>
+	</c:if>
+        </div>
       </div>
     </div>
   </body>

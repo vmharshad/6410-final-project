@@ -1,11 +1,9 @@
 package edu.mga.course6410.fall2018.finalproject.vnh.controller;
 
 import edu.mga.course6410.fall2018.finalproject.vnh.Constants;
-import edu.mga.course6410.fall2018.finalproject.vnh.model.Applicant;
 import edu.mga.course6410.fall2018.finalproject.vnh.model.Application;
 import edu.mga.course6410.fall2018.finalproject.vnh.model.User;
 import edu.mga.course6410.fall2018.finalproject.vnh.repository.ApplicationRepository;
-import edu.mga.course6410.fall2018.finalproject.vnh.repository.RequestForInfoRepository;
 import edu.mga.course6410.fall2018.finalproject.vnh.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -41,10 +39,22 @@ public class ApplicationController {
         System.out.println("Returning application list");
         return "applicationList";
     }
-    
+
     @GetMapping("/applicationstatus")
-    public String getApplicationStatus() {
+    public String getApplicationStatus(Model model) {
         System.out.println("Returning application status");
+        Iterable<Application> allApplicationList = applicationRepository.findAll();
+        List<Application> applicationList = new ArrayList<>();
+        System.out.println("applicationList.size() = " + applicationList.size());
+        for (Application application : allApplicationList) {
+            System.out.println("application = " + application);
+            if (Constants.username.equals(application.getApplicant().getUsername())) {
+                applicationList.add(application);
+                System.out.println("Adding it");
+            }
+        }
+        System.out.println("applicationList.size() = " + applicationList.size());
+        model.addAttribute("applicationList", applicationList);
         return "viewapplicationstatus";
     }
 
@@ -83,7 +93,7 @@ public class ApplicationController {
         System.out.println("model.asMap().get(\"application\") = " + model.asMap().get("application"));
         application.setStatus(Application.Status.APPLIED);
         String applicantName = Constants.username;
-        Applicant applicant = new Applicant(userRepository.getUserByUsername(applicantName));
+        User applicant = userRepository.getUserByUsername(applicantName);
         System.out.println("applicant = " + applicant);
         application.setApplicant(applicant);
         System.out.println("application.getSatScore() = " + application.getSatScore());

@@ -6,20 +6,16 @@ import lombok.ToString;
 
 import java.util.Collection;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Getter
 @Setter
 @ToString
 @Entity
 @Table(name = "user")
+@Inheritance(
+		strategy = InheritanceType.SINGLE_TABLE
+)
 public class User {
 	@Id
 	@Column(name = "username", updatable = false, nullable = false)

@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import edu.mga.course6410.fall2018.finalproject.vnh.model.User;
 import edu.mga.course6410.fall2018.finalproject.vnh.repository.UserRepository;
@@ -53,6 +52,7 @@ public class UserController {
 				User registered = userRepository.save(user);
 				System.out.println("created user - " + registered);
 			} catch (Exception e) {
+				e.printStackTrace();
 				model.addAttribute("error", "Error occured creating account.");
 				return "createAccountForm";
 			}

@@ -20,8 +20,8 @@ public class Application {
     int satScore;
 
     @ManyToOne
-    @JoinColumn(name="applicant_username")
-    Applicant applicant;
+    @JoinColumn(name="user_username")
+    User applicant;
 
     //    List<Reference> referenceList;
     @Column(nullable = true, unique = false)
