@@ -1,5 +1,6 @@
 package edu.mga.course6410.fall2018.finalproject.vnh.controller;
 
+import edu.mga.course6410.fall2018.finalproject.vnh.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -66,8 +67,10 @@ public class UserController {
 	public String login(@ModelAttribute User user, Model model) {
 		System.out.println("submit login - username:" + user.getUsername() + ", pwd:" + user.getPassword());
 
-		if ("admin".equals(user.getUsername()) && "admin".equals(user.getPassword()))
+		if ("admin".equals(user.getUsername()) && "admin".equals(user.getPassword())) {
+			Constants.username = user.getUsername();
 			return "staffhome";
+		}
 
 		User registered = null;
 		try {
@@ -80,6 +83,7 @@ public class UserController {
 				return "index";
 			}
 			System.out.println("valid login");
+			Constants.username = user.getUsername();
 			model.addAttribute("message", "Successfully logged in..");
 		} catch (Exception e) {
 			System.out.println("Error occured creating account.");

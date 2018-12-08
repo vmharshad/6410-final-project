@@ -1,5 +1,6 @@
 package edu.mga.course6410.fall2018.finalproject.vnh.controller;
 
+import edu.mga.course6410.fall2018.finalproject.vnh.Constants;
 import edu.mga.course6410.fall2018.finalproject.vnh.model.Applicant;
 import edu.mga.course6410.fall2018.finalproject.vnh.model.Application;
 import edu.mga.course6410.fall2018.finalproject.vnh.model.User;
@@ -81,7 +82,8 @@ public class ApplicationController {
 
         System.out.println("model.asMap().get(\"application\") = " + model.asMap().get("application"));
         application.setStatus(Application.Status.APPLIED);
-        Applicant applicant = new Applicant(userRepository.getUserByUsername("applicant1"));
+        String applicantName = Constants.username;
+        Applicant applicant = new Applicant(userRepository.getUserByUsername(applicantName));
         System.out.println("applicant = " + applicant);
         application.setApplicant(applicant);
         System.out.println("application.getSatScore() = " + application.getSatScore());
