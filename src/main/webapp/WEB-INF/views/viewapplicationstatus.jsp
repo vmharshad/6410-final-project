@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
   <head>
     <title>ViewApplicationStatus</title>
@@ -14,7 +15,7 @@
     <script src="/resources/scripts/prototypePre.js"></script>
     <script src="/data/document.js"></script>
     <script src="/resources/scripts/prototypePost.js"></script>
-    <!--script src="/files/viewapplicationstatus/data.js"></script-->
+    <script src="/files/viewapplicationstatus/data.js"></script>
     <script type="text/javascript">
       $axure.utils.getTransparentGifPath = function() { return '/resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return '/resources/Other.html'; };
@@ -35,18 +36,10 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u136" class="ax_default label">
-        <div id="u136_div" class=""></div>
-        <div id="u136_text" class="text ">
-          <p><span>Welcome</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
       <div id="u137" class="ax_default label">
         <div id="u137_div" class=""></div>
         <div id="u137_text" class="text ">
-          <p><span>Application Status</span></p>
+          <p><span><b>Application Status</b></span></p>
         </div>
       </div>
 
@@ -116,10 +109,43 @@
         </div>
       </div>
 
+    <form
       <!-- Unnamed (Rectangle) -->
       <div id="u146" class="ax_default box_2">
-        <div id="u146_div" class=""></div>
+        <div id="u146_div" class="">
+
+
+
+    <div>
+        <table border=1>
+        <tr>
+            <th width="50%"><div class="text"><p><span>ID</span><p></div></th>
+            <th width="30%"><div class="text"><p><span>Course</span><p></div></th>
+            <th width="20%"><div class="text"><p><span>Term</span><p></div></th>
+            <th width="30%"><div class="text"><p><span>Status</span><p></div></th>
+            </tr>
+            <br>
+  <c:if test="${not empty applicationList}">
+
+  			<c:forEach var="application" items="${applicationList}">
+            <tr>
+
+            <td><div class="text"><p><span>${application.id}</span><p></div></td>
+            <td><div class="text"><p><span>${application.courseOffering}</span><p></div></td>
+            <td><div class="text"><p><span>${application.term} ${application.termYear}</span><p></div></td>
+            <td><div class="text"><p><span>${application.status}</span><p></div></td>
+
+         </tr>
+         <br>
+			</c:forEach>
+	</c:if>
+        </table>
+
+    </div>
+
+        </div>
       </div>
+      </form>
     </div>
   </body>
 </html>

@@ -55,6 +55,7 @@ public class ApplicationController {
         }
         System.out.println("applicationList.size() = " + applicationList.size());
         model.addAttribute("applicationList", applicationList);
+        model.addAttribute("username", Constants.username);
         return "viewapplicationstatus";
     }
 
