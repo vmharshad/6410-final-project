@@ -23,14 +23,13 @@ public class RequestForInformation {
 	@Column(name = "id", updatable = false, nullable = false)
 	private UUID id;
 	// Personal information
-	@Column(nullable = false, unique = true)
+	@Column(nullable = false, unique = false)
 	private String firstName;
-	@Column(nullable = false, unique = true)
+	@Column(nullable = false, unique = false)
 	private String lastName;
-	@Column(nullable = false, unique = true)
+	@Column(nullable = false, unique = false)
 	private String email;
-
 	// Anticipated Info
-	@Column(nullable = false, unique = true)
+	@Column(nullable = false, unique = false)
 	private String anticipatedProgram;
 }

@@ -16,6 +16,38 @@
     <script src="/resources/scripts/prototypePost.js"></script>
     <!--<script src="/files/requestforinfoformmain/data.js"></script>-->
     <script type="text/javascript">
+        function validateForm()
+        {
+            var first = document.forms["requestforinfoform"]["firstName"].value;
+            var last = document.forms["requestforinfoform"]["lastName"].value;
+            var email = document.forms["requestforinfoform"]["email"].value;
+            var program = document.forms["requestforinfoform"]["anticipatedProgram"].value;
+
+            if(first == "" || last == "" || email == "" || program == "")
+            {
+                alert("Fields must be filled out");
+                return (false);
+            }
+            else
+            {
+                if(validateEmail(email) == true ) {
+                    document.forms['requestforinfoform'].submit();
+                }
+            }
+        }
+        function validateEmail(emailText) {
+                    var mailformat = /\S+@\S+\.\S+/;
+
+                    if(mailformat.test(emailText))
+                    {       return (true);                }
+                    else
+                   {
+                        alert("You have entered an invalid email address!");
+                        document.forms["requestforinfoform"]["email"].focus();
+                            return (false);
+                    }
+                }
+
       $axure.utils.getTransparentGifPath = function() { return '/resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return '/resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return '/resources/reload.html'; };
@@ -103,7 +135,7 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u56" class="ax_default button" tabindex="5" onclick="document.forms['requestforinfoform'].submit();">
+      <div id="u56" class="ax_default button" tabindex="5" onclick="validateForm();">
         <div id="u56_div" class=""></div>
         <div id="u56_text" class="text ">
           <p><span>Request for Information</span></p>
