@@ -151,14 +151,15 @@
           <p><span>Create Account</span></p>
         </div>
       </div>
-
+	<c:if test="${not empty error}">
       <!-- Unnamed (Rectangle) -->
       <div id="u158" class="ax_default label">
         <div id="u158_div" class=""></div>
         <div id="u158_text" class="text ">
-          <p><span></span></p>
+          <p><span>${error}</span></p>
         </div>
       </div>
+      </c:if>
 
       <!-- Unnamed (Rectangle) -->
       <div id="u159" class="ax_default box_2">
