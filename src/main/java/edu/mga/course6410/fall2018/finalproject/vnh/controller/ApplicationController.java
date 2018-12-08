@@ -34,10 +34,21 @@ public class ApplicationController {
     }
 
     @GetMapping("/all")
-    public String getApplications() {
+    public String getApplications(Model model) {
         List<Application> applicationList = new ArrayList<>();
         System.out.println("Returning application list");
-        return "applicationList";
+        Iterable<Application> allApplicationList = applicationRepository.findAll();
+
+        for (Application application : allApplicationList) {
+            System.out.println("application = " + application);
+                applicationList.add(application);
+                System.out.println("Adding it");
+
+        }
+        System.out.println("applicationList.size() = " + applicationList.size());
+        model.addAttribute("applicationList", applicationList);
+        model.addAttribute("username", Constants.username);
+        return "viewapplications";
     }
 
     @GetMapping("/applicationstatus")
