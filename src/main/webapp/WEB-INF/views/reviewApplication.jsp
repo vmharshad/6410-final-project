@@ -33,7 +33,7 @@
       <div id="u84" class="ax_default icon">
         <img id="u84_img" class="img " src="/images/studenthome/u8.png"/>
       </div>
-
+	<form name="incomplete" action="/applications/${application.id}/REJECTED_INCOMPLETE" method="get" onclick="document.forms['incomplete'].submit();">
       <!-- Unnamed (Rectangle) -->
       <div id="u85" class="ax_default button">
         <div id="u85_div" class=""></div>
@@ -41,7 +41,9 @@
           <p><span>Mark Incomplete</span></p>
         </div>
       </div>
-
+      </form>
+<form name="admitted" action="/applications/${application.id}/ADMITTED" method="get" onclick="document.forms['admitted'].submit();">
+    
       <!-- Unnamed (Rectangle) -->
       <div id="u86" class="ax_default button">
         <div id="u86_div" class=""></div>
@@ -49,7 +51,9 @@
           <p><span>Accept</span></p>
         </div>
       </div>
-
+      </form>
+<form name="rejected" action="/applications/${application.id}/REJECTED_DISQUALIFIED" method="get" onclick="document.forms['rejected'].submit();">
+    
       <!-- Unnamed (Rectangle) -->
       <div id="u87" class="ax_default button">
         <div id="u87_div" class=""></div>
@@ -57,6 +61,7 @@
           <p><span>Reject</span></p>
         </div>
       </div>
+      </form>
 
       <!-- Unnamed (Rectangle) -->
       <div id="u88" class="ax_default heading_1">
@@ -97,7 +102,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u93" class="ax_default text_field">
-        <input id="u93_input" type="text" value="" readonly/>
+        <input id="u93_input" type="text" value="${application.alumnusParentName}, ${application.alumnusParentGradYear}" readonly/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -118,18 +123,19 @@
 
       <!-- Unnamed (Droplist) -->
       <div id="u96" class="ax_default droplist">
-        <select id="u96_input">
-        </select>
+      <input id="u96_input" type="text" value="${application.courseOffering}" readonly/>
+        <!--  >select id="u96_input">
+        </select-->
       </div>
 
       <!-- Unnamed (Text Area) -->
       <div id="u97" class="ax_default text_area">
-        <textarea id="u97_input" readonly></textarea>
+        <textarea id="u97_input" readonly>${application.reference1}</textarea>
       </div>
 
       <!-- Unnamed (Text Area) -->
       <div id="u98" class="ax_default text_area">
-        <textarea id="u98_input" readonly></textarea>
+        <textarea id="u98_input" readonly>${application.reference2}</textarea>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -142,7 +148,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u100" class="ax_default text_field">
-        <input id="u100_input" type="text" value="" readonly/>
+        <input id="u100_input" type="text" value="${application.termYear}" readonly/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -155,16 +161,17 @@
 
       <!-- Unnamed (Droplist) -->
       <div id="u102" class="ax_default droplist">
-        <select id="u102_input">
+      <input id="u102_input" type="text" value="${application.term}" readonly/>
+        <!--select id="u102_input">
           <option value="Fall">Fall</option>
           <option value="Summer">Summer</option>
           <option value="Spring">Spring</option>
-        </select>
+        </select -->
       </div>
 
       <!-- Unnamed (Text Field) -->
       <div id="u103" class="ax_default text_field">
-        <input id="u103_input" type="text" value="" readonly/>
+        <input id="u103_input" type="text" value="${application.termYear}" readonly/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -177,7 +184,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u105" class="ax_default text_field">
-        <input id="u105_input" type="text" value="" readonly/>
+        <input id="u105_input" type="text" value="${application.attendedSchoolYear}" readonly/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -229,7 +236,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u112" class="ax_default text_field">
-        <input id="u112_input" type="text" value="" readonly/>
+        <input id="u112_input" type="text" value="${application.dateApplied}" readonly/>
       </div>
 
       <!-- Unnamed (Rectangle) -->

@@ -10,15 +10,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
 @Controller
 @RequestMapping("/applications")
 public class ApplicationController {
-
+	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
     @Autowired
     ApplicationRepository applicationRepository;
 
@@ -36,7 +39,7 @@ public class ApplicationController {
     @GetMapping("/all")
     public String getApplications() {
         List<Application> applicationList = new ArrayList<>();
-        System.out.println("Returning application list");
+        System.out.println("Returning application list, for username" + Constants.username);
         return "applicationList";
     }
 
@@ -71,9 +74,24 @@ public class ApplicationController {
         model.addAttribute("application", application);
         return "applications";
     }
+    
+    @GetMapping("/{id}/{status}")
+    public String markIncomplete(@PathVariable UUID id, @PathVariable String status, Model model) {
+    	System.out.println("Updateing application id" + id.toString() + " to " + status);
+        if (null == id)
+            return "createApplication";
+        
+        Application application = null;
+        application = applicationRepository.findById(id).get();
+        application.setStatus(Application.Status.getStatus(status));
+        applicationRepository.save(application);
+        System.out.println("application.toString() = " + application.toString());
+        model.addAttribute("application", application);
+        return "applicationList";
+    }
 
 
-    @GetMapping("/review//{id}")
+    @GetMapping("/review/{id}")
     public String reviewApplication(@PathVariable UUID id, Model model) {
         if (null == id)
             return "createApplication";
@@ -90,11 +108,18 @@ public class ApplicationController {
     @PostMapping
     public String createApplication(@ModelAttribute Application application, Model model) {
         System.out.println("Arrays.toString(model.asMap().keySet().toArray()) = " + Arrays.toString(model.asMap().keySet().toArray()));
-
-        System.out.println("model.asMap().get(\"application\") = " + model.asMap().get("application"));
-        application.setStatus(Application.Status.APPLIED);
         String applicantName = Constants.username;
         User applicant = userRepository.getUserByUsername(applicantName);
+        System.out.println("model.asMap().get(\"application\") = " + model.asMap().get("application") + ", applicantName =" +applicantName);
+        application.setStatus(Application.Status.APPLIED);
+        Date date;
+		try {
+			date = dateFormat.parse(dateFormat.format(Calendar.getInstance().getTime()));
+		} catch (Exception e) {
+			System.out.println("Error occurred");
+			date = Calendar.getInstance().getTime();
+		}
+        application.setDateApplied(date);
         System.out.println("applicant = " + applicant);
         application.setApplicant(applicant);
         System.out.println("application.getSatScore() = " + application.getSatScore());

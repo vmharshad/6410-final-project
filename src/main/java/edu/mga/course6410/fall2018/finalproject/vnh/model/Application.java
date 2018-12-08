@@ -1,5 +1,6 @@
 package edu.mga.course6410.fall2018.finalproject.vnh.model;
 
+import java.util.Date;
 import java.util.UUID;
 
 import javax.persistence.*;
@@ -17,7 +18,7 @@ import lombok.ToString;
 public class Application {
 
     @Column(nullable = false, unique = false)
-    int satScore;
+    String satScore;
 
     @ManyToOne
     @JoinColumn(name="user_username")
@@ -29,11 +30,11 @@ public class Application {
     @Column(nullable = true, unique = false)
     String reference2;
 
-    @Column(nullable = true, unique = false)
+    @Column(nullable = false, unique = false)
     String alumnusParentName;
 
     @Column(nullable = false, unique = false)
-    int alumnusParentGradYear;
+    String alumnusParentGradYear;
 
     @Column(nullable = false, unique = false)
     String courseOffering;
@@ -42,13 +43,16 @@ public class Application {
     String term;
 
     @Column(nullable = false, unique = false)
-    int termYear;
+    String termYear;
 
     @Column(nullable = false, unique = false)
     String attendedSchool;
 
     @Column(nullable = false, unique = false)
-    int attendedSchoolYear;
+    String attendedSchoolYear;
+    
+    @Column(nullable = false, unique = false)
+    Date dateApplied;
 
     @Enumerated(EnumType.STRING)
     @Column
@@ -64,5 +68,14 @@ public class Application {
 
     public enum Status {
         APPLIED, REVIEWED, ADMITTED, REJECTED_DISQUALIFIED, REJECTED_INCOMPLETE;
+    	
+    	public static Status getStatus(String input) {
+    		for (Status status : Status.values()) {
+				if(status.toString().equals(input)) {
+					return status;
+				}
+			}
+    		return APPLIED;
+    	}
     }
 }
