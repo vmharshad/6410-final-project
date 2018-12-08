@@ -34,7 +34,21 @@ public class UserController {
 			model.addAttribute("error", "'admin' is not a valid username.");
 			return "createAccountForm";
 		}
-		if (validUser(user, error)) {
+
+		User foundExisting = userRepository.getUserByEmail(user.getEmail());
+		if (foundExisting != null) {
+			System.out.println("Email already exist");
+			error = "Email address already exist";
+			model.addAttribute("error", error);
+			return "createAccountForm";
+		}
+		foundExisting = userRepository.getUserByUsername(user.getUsername());
+		if (foundExisting != null) {
+			System.out.println("username already exist");
+			error = "Username address already exist. Please select another username";
+			model.addAttribute("error", error);
+			return "createAccountForm";
+		}
 			try {
 				User registered = userRepository.save(user);
 				System.out.println("created user - " + registered);
@@ -42,24 +56,12 @@ public class UserController {
 				model.addAttribute("error", "Error occured creating account.");
 				return "createAccountForm";
 			}
-		}
+
 		return "redirect:/";
 	}
 
 	private boolean validUser(User user, String error) {
-		if (user.getPassword().equals(user.getConfirmPassword())) {
-			User foundExisting = userRepository.getUserByEmail(user.getEmail());
-			if (foundExisting == null) {
-				System.out.println("valid user");
-				return true;
-			} else {
-				System.out.println("Email already exist");
-				error = "Email address already exist";
-			}
-		} else {
-			System.out.println("Password and confirm password does not match");
-			error = "Password and confirm password does not match";
-		}
+
 		return false;
 	}
 
