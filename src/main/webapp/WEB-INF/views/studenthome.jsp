@@ -76,10 +76,12 @@
 		</form>
           <!-- Unnamed (Menu Item) -->
           <div id="u7" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+          <a href="/files/StudentAdmissionUserDocument.pdf" target="_blank">
             <img id="u7_img" class="img " src="/images/studenthome/u7.png"/>
             <div id="u7_text" class="text ">
               <p><span>Help</span></p>
             </div>
+            </a>
           </div>
         </div>
       </div>

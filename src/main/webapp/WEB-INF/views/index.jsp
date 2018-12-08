@@ -71,7 +71,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u128" class="ax_default text_field">
-        <input id="u128_input" type="text" name="password" tabindex="2" placeholder="password" onkeypress="checkSubmit(event)" value=""/>
+        <input id="u128_input" type="password" name="password" tabindex="2" placeholder="password" onkeypress="checkSubmit(event)" value=""/>
       </div>
 
       <!-- Unnamed (Rectangle) -->

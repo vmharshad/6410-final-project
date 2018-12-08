@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>StaffHome</title>
@@ -74,11 +74,13 @@
           </div>
 		</form>
           <!-- Unnamed (Menu Item) -->
-          <div id="u82" class="ax_default menu_item">
+          <div id="u82" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+          <a href="/files/StudentAdmissionUserDocument.pdf" target="_blank">
             <img id="u82_img" class="img " src="/images/staffhome/u82.png"/>
             <div id="u82_text" class="text ">
               <p><span>Help</span></p>
             </div>
+            </a>
           </div>
         </div>
       </div>

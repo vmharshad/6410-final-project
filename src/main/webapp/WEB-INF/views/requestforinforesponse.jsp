@@ -84,11 +84,13 @@
           </form>
 
           <!-- Unnamed (Menu Item) -->
-          <div id="u71" class="ax_default menu_item">
+          <div id="u71" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+          <a href="/files/StudentAdmissionUserDocument.pdf" target="_blank">
             <img id="u71_img" class="img " src="images/studenthome/u7.png"/>
             <div id="u71_text" class="text ">
               <p><span>Help</span></p>
             </div>
+            </a>
           </div>
         </div>
       </div>
