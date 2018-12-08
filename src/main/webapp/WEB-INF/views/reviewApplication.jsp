@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>ReiewApplication</title>
@@ -195,22 +195,28 @@
         <!-- Unnamed (Table) -->
         <div id="u108" class="ax_default">
 
+<form name="viewapplications" action="/user/staffhome" method="get" onclick="document.forms['viewapplications'].submit();">
+	
           <!-- Unnamed (Menu Item) -->
-          <div id="u109" class="ax_default menu_item">
+          <div id="u109" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
             <img id="u109_img" class="img " src="/images/reiewapplication/u109.png"/>
             <div id="u109_text" class="text ">
               <p><span>Home</span></p>
             </div>
           </div>
+          </form>
 
+			<form name="viewapplications" action="/applications/all" method="get" onclick="document.forms['viewapplications'].submit();">
+	
           <!-- Unnamed (Menu Item) -->
-          <div id="u110" class="ax_default menu_item">
+          <div id="u110" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
             <img id="u110_img" class="img " src="/images/reiewapplication/u110.png"/>
             <div id="u110_text" class="text ">
               <p><span>View Applications</span></p>
             </div>
           </div>
 
+	</form>
           <!-- Unnamed (Menu Item) -->
           <div id="u111" class="ax_default menu_item">
             <img id="u111_img" class="img " src="/images/staffhome/u82.png"/>

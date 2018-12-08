@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>RequestForInfoFormMain</title>
@@ -54,8 +54,7 @@
     </script>
   </head>
   <body>
-  	<form name="requestforinfoform" style="height: 66px;" action="requestforinfo" method="post" modelAttribute="RequestForInformation">
-    <div id="base" class="">
+  	<div id="base" class="">
 
       <!-- Unnamed (Rectangle) -->
       <div id="u44" class="ax_default box_2">
@@ -68,14 +67,15 @@
 
         <!-- Unnamed (Table) -->
         <div id="u46" class="ax_default">
-
+		<form name="viewapplications" action="/user/studenthome" method="get" onclick="document.forms['viewapplications'].submit();">
           <!-- Unnamed (Menu Item) -->
-          <div id="u47" class="ax_default menu_item">
+          <div id="u47" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
             <img id="u47_img" class="img " src="/images/applymain/u15.png"/>
             <div id="u47_text" class="text ">
               <p><span>Home</span></p>
             </div>
           </div>
+          </form>
 
           <!-- Unnamed (Menu Item) -->
           <div id="u48" class="ax_default menu_item">
@@ -85,21 +85,27 @@
             </div>
           </div>
 
+		<form name="apply" action="/applications" method="get" onclick="document.forms['apply'].submit();" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
+        
           <!-- Unnamed (Menu Item) -->
-          <div id="u49" class="ax_default menu_item">
+          <div id="u49" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
             <img id="u49_img" class="img " src="/images/requestforinfoformmain/u49.png"/>
             <div id="u49_text" class="text ">
               <p><span>Apply</span></p>
             </div>
           </div>
+          </form>
 
+			<form name="applicationStatus" action="/applications/applicationstatus" method="get" onclick="document.forms['applicationStatus'].submit();">
+        
           <!-- Unnamed (Menu Item) -->
-          <div id="u50" class="ax_default menu_item">
+          <div id="u50" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">
             <img id="u50_img" class="img " src="/images/studenthome/u6.png"/>
             <div id="u50_text" class="text ">
               <p><span>View Application Status</span></p>
             </div>
           </div>
+          </form>
 
           <!-- Unnamed (Menu Item) -->
           <div id="u51" class="ax_default menu_item">
@@ -110,7 +116,8 @@
           </div>
         </div>
       </div>
-
+<form name="requestforinfoform" style="height: 66px;" action="requestforinfo" method="post" modelAttribute="RequestForInformation">
+    
       <!-- Unnamed (Shape) -->
       <div id="u52" class="ax_default icon">
         <img id="u52_img" class="img " src="/images/studenthome/u8.png"/>
