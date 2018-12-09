@@ -202,7 +202,7 @@
         <!-- Unnamed (Table) -->
         <div id="u108" class="ax_default">
 
-<form name="viewapplications" action="/user/staffhome" method="get" onclick="document.forms['viewapplications'].submit();">
+<form name="staffhome" action="/user/staffhome" method="get" onclick="document.forms['staffhome'].submit();">
 	
           <!-- Unnamed (Menu Item) -->
           <div id="u109" class="ax_default menu_item" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';">

@@ -106,7 +106,7 @@
       <div id="u151" class="ax_default label">
         <div id="u151_div" class=""></div>
         <div id="u151_text" class="text ">
-          <p><span>Username</span></p>
+          <p><span>Username *</span></p>
         </div>
       </div>
 
@@ -119,7 +119,7 @@
       <div id="u153" class="ax_default label">
         <div id="u153_div" class=""></div>
         <div id="u153_text" class="text ">
-          <p><span>Confirm Password</span></p>
+          <p><span>Confirm Password *</span></p>
         </div>
       </div>
 
@@ -132,7 +132,7 @@
       <div id="u155" class="ax_default label">
         <div id="u155_div" class=""></div>
         <div id="u155_text" class="text ">
-          <p><span>Password</span></p>
+          <p><span>Password *</span></p>
         </div>
       </div>
 
@@ -180,7 +180,7 @@
       <div id="u162" class="ax_default label">
         <div id="u162_div" class=""></div>
         <div id="u162_text" class="text ">
-          <p><span>First Name</span></p>
+          <p><span>First Name *</span></p>
         </div>
       </div>
 
@@ -193,7 +193,7 @@
       <div id="u164" class="ax_default label">
         <div id="u164_div" class=""></div>
         <div id="u164_text" class="text ">
-          <p><span>Email</span></p>
+          <p><span>Email *</span></p>
         </div>
       </div>
 
@@ -211,7 +211,7 @@
       <div id="u167" class="ax_default label">
         <div id="u167_div" class=""></div>
         <div id="u167_text" class="text ">
-          <p><span>Street</span></p>
+          <p><span>Street *</span></p>
         </div>
       </div>
 
@@ -224,7 +224,7 @@
       <div id="u169" class="ax_default label">
         <div id="u169_div" class=""></div>
         <div id="u169_text" class="text ">
-          <p><span>Zip</span></p>
+          <p><span>Zip *</span></p>
         </div>
       </div>
 
@@ -232,7 +232,7 @@
       <div id="u170" class="ax_default label">
         <div id="u170_div" class=""></div>
         <div id="u170_text" class="text ">
-          <p><span>State</span></p>
+          <p><span>State *</span></p>
         </div>
       </div>
 
@@ -294,7 +294,7 @@
       <div id="u172" class="ax_default label">
         <div id="u172_div" class=""></div>
         <div id="u172_text" class="text ">
-          <p><span>Last Name</span></p>
+          <p><span>Last Name *</span></p>
         </div>
       </div>
 
@@ -302,7 +302,7 @@
       <div id="u173" class="ax_default label">
         <div id="u173_div" class=""></div>
         <div id="u173_text" class="text ">
-          <p><span>City</span></p>
+          <p><span>City *</span></p>
         </div>
       </div>
 

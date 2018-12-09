@@ -139,7 +139,7 @@
       <div id="u55" class="ax_default label">
         <div id="u55_div" class=""></div>
         <div id="u55_text" class="text ">
-          <p><span>Last Name</span></p>
+          <p><span>Last Name *</span></p>
         </div>
       </div>
 
@@ -155,7 +155,7 @@
       <div id="u57" class="ax_default label">
         <div id="u57_div" class=""></div>
         <div id="u57_text" class="text ">
-          <p><span>First Name</span></p>
+          <p><span>First Name *</span></p>
         </div>
       </div>
 
@@ -168,7 +168,7 @@
       <div id="u59" class="ax_default label">
         <div id="u59_div" class=""></div>
         <div id="u59_text" class="text ">
-          <p><span>Email</span></p>
+          <p><span>Email *</span></p>
         </div>
       </div>
 
@@ -176,7 +176,7 @@
       <div id="u60" class="ax_default label">
         <div id="u60_div" class=""></div>
         <div id="u60_text" class="text ">
-          <p><span>Course</span></p>
+          <p><span>Course *</span></p>
         </div>
       </div>
 

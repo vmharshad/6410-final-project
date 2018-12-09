@@ -47,6 +47,9 @@
 
       <!-- Unnamed (List Box) -->
       <div id="u116" class="ax_default list_box">
+      <span>
+    Please select application to take further action:
+    </span> 
         <select id="u116_input" size="2" onchange="reviewApplication(value);">
     <c:if test="${not empty applicationList}">
 
@@ -60,13 +63,13 @@
         </select>
       </div>
 
-      <!-- Unnamed (Rectangle) -->
+      <!-- Unnamed (Rectangle)
       <div id="u117" class="ax_default button">
         <div id="u117_div" class=""></div>
         <div id="u117_text" class="text ">
           <p><span>View Application</span></p>
         </div>
-      </div>
+      </div> -->
 
       <!-- Unnamed (Rectangle) -->
       <div id="u118" class="ax_default heading_1">

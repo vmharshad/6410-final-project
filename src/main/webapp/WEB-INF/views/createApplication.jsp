@@ -128,7 +128,7 @@
       <div id="u22" class="ax_default label">
         <div id="u22_div" class=""></div>
         <div id="u22_text" class="text ">
-          <p><span>Reference1</span></p>
+          <p><span>Reference1 *</span></p>
         </div>
       </div>
 
@@ -146,7 +146,7 @@
       <div id="u24" class="ax_default label">
         <div id="u24_div" class=""></div>
         <div id="u24_text" class="text ">
-          <p><span>SAT Score</span></p>
+          <p><span>SAT Score *</span></p>
         </div>
       </div>
 
@@ -154,7 +154,7 @@
       <div id="u25" class="ax_default label">
         <div id="u25_div" class=""></div>
         <div id="u25_text" class="text ">
-          <p><span>Reference2</span></p>
+          <p><span>Reference2 *</span></p>
         </div>
       </div>
 
@@ -178,7 +178,7 @@
         <div id="u29" class="ax_default label">
           <div id="u29_div" class=""></div>
           <div id="u29_text" class="text ">
-            <p><span>Course</span></p>
+            <p><span>Course *</span></p>
           </div>
         </div>
 
@@ -252,7 +252,7 @@
         <div id="u31" class="ax_default label">
           <div id="u31_div" class=""></div>
           <div id="u31_text" class="text ">
-            <p><span>Term</span></p>
+            <p><span>Term *</span></p>
           </div>
         </div>
 
@@ -265,7 +265,7 @@
         <div id="u33" class="ax_default label">
           <div id="u33_div" class=""></div>
           <div id="u33_text" class="text ">
-            <p><span>Year</span></p>
+            <p><span>Year *</span></p>
           </div>
         </div>
 
@@ -288,7 +288,7 @@
         <div id="u36" class="ax_default label">
           <div id="u36_div" class=""></div>
           <div id="u36_text" class="text ">
-            <p><span>Attended School</span></p>
+            <p><span>Attended School *</span></p>
           </div>
         </div>
 
@@ -320,7 +320,7 @@
       <div id="u41" class="ax_default label">
         <div id="u41_div" class=""></div>
         <div id="u41_text" class="text ">
-          <p><span>Year</span></p>
+          <p><span>Year *</span></p>
         </div>
       </div>
 

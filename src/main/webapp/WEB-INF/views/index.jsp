@@ -42,6 +42,9 @@
       
       
     </script>
+    <style>
+    .required input:after { content:"*"; }
+<	</style>
   </head>
   <body>
     <div id="base" class="">
@@ -65,7 +68,7 @@
       <div id="u127" class="ax_default label">
         <div id="u127_div" class=""></div>
         <div id="u127_text" class="text ">
-          <p><span>Username</span></p>
+          <p><span>Username *</span></p>
         </div>
       </div>
 
@@ -78,7 +81,7 @@
       <div id="u129" class="ax_default label">
         <div id="u129_div" class=""></div>
         <div id="u129_text" class="text ">
-          <p><span>Password</span></p>
+          <p><span>Password *</span></p>
         </div>
       </div>
 
