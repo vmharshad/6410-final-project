@@ -26,16 +26,34 @@
                 var termYear = document.forms["applications"]["termYear"].value;
                 var attendedSchool = document.forms["applications"]["attendedSchool"].value;
                 var attendedSchoolYear = document.forms["applications"]["attendedSchoolYear"].value;
-
+                
                 if(satScore == "" || reference1 == "" || reference2 == "" || courseOffering == "" || term == "" || termYear == "" || attendedSchool == "" || attendedSchoolYear == "")
                 {
                     alert("All Fields except Alumni parent information are mandatory to fill in application");
                     return (false);
                 }
-                else
-                {
-                        document.forms['applications'].submit();
+                if(termYear < 2018 || termYear > 2020) {
+                	alert("We are accepting applicatios for the year 2019 or 2020. Please enter valid term year.");
+                	return false;
                 }
+                
+                if(attendedSchoolYear < 1990 || attendedSchoolYear > 2018) {
+                	alert("Please enter valid school attended year");
+                	return false;
+                }
+                var alumnusParentGradYear = document.forms["applications"]["alumnusParentGradYear"].value;
+                
+                if(alumnusParentGradYear != "" && (alumnusParentGradYear < 1930 || alumnusParentGradYear > 2017)) {
+                	alert("Please enter valid parent's graduation year");
+                	return false;
+                }
+                if(satScore < 400 || satScore > 1600) {
+                	alert("Please enter valid SAT score.");
+                	return false;
+                }
+               
+               document.forms['applications'].submit();
+               
             }
       $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
