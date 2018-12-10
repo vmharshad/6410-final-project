@@ -47,8 +47,18 @@
                 	alert("Please enter valid parent's graduation year");
                 	return false;
                 }
-                if(satScore < 400 || satScore > 1600) {
+                var regExpr = new RegExp("^\d*\.?\d*$");
+                if(!regExpr.test(satScore) || satScore < 400 || satScore > 1600) {
                 	alert("Please enter valid SAT score.");
+                	return false;
+                }
+                
+                if(reference1 != "" && reference1.length > 10000) {
+                	alert("Please enter reference text with 10000 word limit. -" + reference1.length);
+                	return false;
+                }
+                if(reference2 != "" && reference2.length > 10000) {
+                	alert("Please enter reference text with 10000 word limit. -" + reference1.length);
                 	return false;
                 }
                
@@ -326,12 +336,12 @@
 
       <!-- Unnamed (Text Area) -->
       <div id="u39" class="ax_default text_area">
-        <textarea id="u39_input" name="reference1" placeholder="Please include following information: Referral Name, Email, Phone Number and Reference Text" tabindex="2"></textarea>
+        <textarea id="u39_input" name="reference1" placeholder="Please include following information: Referral Name, Email, Phone Number and Reference Text (limit 1o0oo chars)" tabindex="2"></textarea>
       </div>
 
       <!-- Unnamed (Text Area) -->
       <div id="u40" class="ax_default text_area">
-        <textarea id="u40_input" name="reference2" placeholder="Please include following information: Referral Name, Email, Phone Number and Reference Text" tabindex="3"></textarea>
+        <textarea id="u40_input" name="reference2" placeholder="Please include following information: Referral Name, Email, Phone Number and Reference Text (limit 1o0oo chars)" tabindex="3"></textarea>
       </div>
 
       <!-- Unnamed (Rectangle) -->
