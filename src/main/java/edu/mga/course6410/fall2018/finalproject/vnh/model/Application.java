@@ -25,9 +25,9 @@ public class Application {
     User applicant;
 
     //    List<Reference> referenceList;
-    @Column(nullable = true, unique = false)
+    @Column(nullable = true, unique = false, length = 100000)
     String reference1;
-    @Column(nullable = true, unique = false)
+    @Column(nullable = true, unique = false, length = 100000)
     String reference2;
 
     @Column(nullable = false, unique = false)
