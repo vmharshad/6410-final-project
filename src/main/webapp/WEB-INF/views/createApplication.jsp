@@ -48,8 +48,8 @@
                 	return false;
                 }
                 var regExpr = new RegExp("^\d*\.?\d*$");
-                if(!regExpr.test(satScore) || satScore < 400 || satScore > 1600) {
-                	alert("Please enter valid SAT score.");
+                if(isNaN(satScore) || satScore < 400 || satScore > 1600) {
+                	alert("Please enter valid SAT score (betwen 400 and 1600).");
                 	return false;
                 }
                 

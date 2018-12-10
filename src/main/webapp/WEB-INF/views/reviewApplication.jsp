@@ -102,7 +102,7 @@
 
       <!-- Unnamed (Text Field) -->
       <div id="u93" class="ax_default text_field">
-        <input id="u93_input" type="text" value="${application.alumnusParentName}, ${application.alumnusParentGradYear}" readonly/>
+        <input id="u93_input" type="text" value="${application.alumnusParentName} ${application.alumnusParentGradYear}" readonly/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
